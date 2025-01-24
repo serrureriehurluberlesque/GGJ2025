@@ -36,7 +36,7 @@ func reset_all():
 	init_personnage()
 	
 func compute_ingredient(p):
-	return {"tee": "green", "sirup": "hibiscus", "bubble": "water"}
+	return {"tee": "green", "sirup": "hibiscus", "bubbles": "water"}
 
 func init_personnage():
 	personnage.show()
@@ -54,7 +54,9 @@ func init_composition():
 	composition.connect("validate", init_verificator)
 	composition.show()
 
-func init_verificator(response, response2, response3):
+func init_verificator(response):
+	print(response)
+	print(ingredients)
 	prompt.hide()
 	composition.hide()
 	verificator.show()
