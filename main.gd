@@ -1,12 +1,51 @@
 extends Control
 
+var prompt_text
+var ingredients
+var ingredients_list
+
+var personnage
+var prompt
+var composition
+var verificator
+
 var animationplayer
 
 func _ready() -> void:
+	# Faut load ingredients_list
+	personnage = $AspectRatioContainer/Background/Personnage
+	personnage.hide()
+	prompt = $AspectRatioContainer/Background/Prompt
+	prompt.hide()
+	verificator = $AspectRatioContainer/Background/Verificator
+	verificator.hide()
+	composition = $Composition
+	composition.hide()
+	
 	animationplayer = $AnimationPlayer
+	
+	init_personnage()
+	
+	composition.connect("validate", init_verificator)
+
+func compute_ingredient(p):
+	return {"tee": "green", "sirup": "hibiscus", "bubble": "water"}
+
+func init_personnage():
+	personnage.show()
 	animationplayer.play("personnage_in")
 
+func init_prompt():
+	prompt_text = "Le jeu"
+	ingredients = compute_ingredient(prompt_text)
+	
+	prompt.show()
+	animationplayer.play("prompt_in")
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func init_composition():
+	composition.show()
+
+func init_verificator(response, response2, response3):
+	prompt.hide()
+	composition.hide()
+	verificator.show()
