@@ -1,4 +1,3 @@
-@tool
 extends HBoxContainer
 
 #@onready var icon: TextureRect = %Icon

@@ -2,6 +2,10 @@ extends Node
 
 signal validate
 
+static var CHOSEN_TEA: String = "green_tea"
+static var CHOSEN_SIRUP: String = "peach"
+static var CHOSEN_BUBBLES: String = "strawberry"
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -14,4 +18,4 @@ func _process(delta: float) -> void:
 
 
 func _on_button_pressed() -> void:
-	validate.emit("green_tea", "lytchee", "strawberry_pearls")
+	validate.emit({"tea": CHOSEN_TEA, "sirup": CHOSEN_SIRUP, "bubbles": CHOSEN_BUBBLES})

@@ -5,8 +5,10 @@
 
 [sub_resource type="SystemFont" id="SystemFont_6nnth"]
 font_weight = 600
+subpixel_positioning = 0
 
 [sub_resource type="SystemFont" id="SystemFont_l1sdb"]
+subpixel_positioning = 0
 
 [node name="IconItemContainer" type="HBoxContainer"]
 anchors_preset = -1
