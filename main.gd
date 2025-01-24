@@ -20,7 +20,6 @@ func _ready() -> void:
 	
 	animationplayer = $AnimationPlayer
 	
-	composition.connect("validate", init_verificator)
 	
 	reset_all()
 
@@ -51,6 +50,7 @@ func init_prompt():
 	animationplayer.play("prompt_in")
 
 func init_composition():
+	composition.connect("validate", init_verificator)
 	composition.show()
 
 func init_verificator(response, response2, response3):
