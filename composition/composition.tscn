@@ -1,48 +1,36 @@
-[gd_scene load_steps=3 format=3 uid="uid://6kw3g6bmikqu"]
+[gd_scene load_steps=4 format=3 uid="uid://6kw3g6bmikqu"]
 
 [ext_resource type="Script" path="res://composition/composition.gd" id="1_8q7nh"]
 [ext_resource type="PackedScene" uid="uid://dmujsrnw1l4lj" path="res://composition/icon_item_container.tscn" id="1_d8chm"]
+[ext_resource type="Texture2D" uid="uid://dof2tb8konjji" path="res://icon.svg" id="3_cxm2p"]
 
 [node name="Composition" type="Control"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = -1152.0
-offset_bottom = -648.0
+anchors_preset = 0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_8q7nh")
 metadata/_edit_use_anchors_ = true
 
 [node name="Background" type="ColorRect" parent="."]
+layout_mode = 0
 offset_right = 1154.0
 offset_bottom = 644.0
 
-[node name="Glass" type="TextureRect" parent="."]
-layout_mode = 1
-anchors_preset = 11
-anchor_left = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 0
-grow_vertical = 2
-
-[node name="ReferenceRect" type="ReferenceRect" parent="Glass"]
-layout_mode = 0
-offset_left = -170.0
-offset_top = -191.0
-offset_right = 40.0
-offset_bottom = 162.0
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+layout_mode = 2
+offset_top = 169.0
+offset_right = 375.0
+offset_bottom = 297.0
+texture = ExtResource("3_cxm2p")
 
 [node name="TypeSelection" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(10, 10)
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.0529514
-anchor_top = 0.0925926
-anchor_right = 0.415799
-anchor_bottom = 0.908951
-grow_vertical = 2
+offset_right = 375.0
+offset_bottom = 591.0
+metadata/_edit_use_anchors_ = true
 
 [node name="List" type="VBoxContainer" parent="TypeSelection"]
 layout_mode = 2
@@ -52,11 +40,13 @@ layout_mode = 2
 
 [node name="IconItemContainer" parent="TypeSelection/List/Item1" instance=ExtResource("1_d8chm")]
 layout_mode = 2
+item_icon = ExtResource("3_cxm2p")
 
 [node name="HSeparator" type="HSeparator" parent="TypeSelection/List"]
 layout_mode = 2
 
 [node name="Button" type="Button" parent="."]
+layout_mode = 0
 offset_left = 390.0
 offset_top = 411.0
 offset_right = 562.0
