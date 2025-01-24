@@ -1,8 +1,8 @@
 extends Control
 
-var prompt_text
-var ingredients
-var ingredients_list
+var prompt_text = ""
+var ingredients = {}
+var ingredients_list = {}
 
 var personnage
 var prompt
@@ -14,20 +14,28 @@ var animationplayer
 func _ready() -> void:
 	# Faut load ingredients_list
 	personnage = $AspectRatioContainer/Background/Personnage
-	personnage.hide()
 	prompt = $AspectRatioContainer/Background/Prompt
-	prompt.hide()
 	verificator = $AspectRatioContainer/Background/Verificator
-	verificator.hide()
 	composition = $Composition
-	composition.hide()
 	
 	animationplayer = $AnimationPlayer
 	
+	composition.connect("validate", init_verificator)
+	
+	reset_all()
+
+func reset_all():
+	composition.hide()
+	verificator.hide()
+	prompt.hide()
+	personnage.hide()
+	
+	prompt_text = ""
+	ingredients = {}
+	ingredients_list = {}
+	
 	init_personnage()
 	
-	composition.connect("validate", init_verificator)
-
 func compute_ingredient(p):
 	return {"tee": "green", "sirup": "hibiscus", "bubble": "water"}
 
