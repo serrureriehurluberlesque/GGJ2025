@@ -99,15 +99,18 @@ func init_verificator(response):
 	
 	for n in ["Tea", "Syrup", "Bubble"]:
 		verificator.get_node(n).set_texture(load("res://assets/" + r[n] + ".png"))
+		verificator.get_node(n).modulate = Color(1, 1, 1, 0)
 	
 	if hanamaru:
 		redo_btn.set_disabled(true)
-		redo_btn.modulate = Color(0.5, 0.5, 0.5)
 	else:
 		next_btn.set_disabled(true)
-		next_btn.modulate = Color(0.5, 0.5, 0.5)
+	
+	redo_btn.modulate = Color(1, 1, 1, 0)
+	next_btn.modulate = Color(1, 1, 1, 0)
 	
 	verificator.show()
+	animationplayer.play("validation")
 
 func redo():
 	finished.emit(false)

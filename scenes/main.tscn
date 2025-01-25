@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://c4ivvsabqt0xl"]
+[gd_scene load_steps=18 format=3 uid="uid://c4ivvsabqt0xl"]
 
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_5kc4h"]
 [ext_resource type="Texture2D" uid="uid://bbmx6433by8vj" path="res://assets/decor_1_back.png" id="2_l4ynh"]
@@ -10,6 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://dt28dx32r4u8m" path="res://assets/verre_fini.png" id="7_k06tq"]
 [ext_resource type="Texture2D" uid="uid://dof2tb8konjji" path="res://icon.svg" id="8_8e3eg"]
 [ext_resource type="Texture2D" uid="uid://egfp342sfpk8" path="res://assets/bouton_craft_2.png" id="9_uf3h7"]
+[ext_resource type="Texture2D" uid="uid://bb68no8bax3ek" path="res://assets/bouton_craft_2_disabled.png" id="10_fmwpd"]
+[ext_resource type="Texture2D" uid="uid://dpw1n3gqjcmt7" path="res://assets/bouton_craft_2_pressed.png" id="10_uhkwg"]
+[ext_resource type="Texture2D" uid="uid://cpnh2joxosm2d" path="res://assets/bouton_craft_2_hover.png" id="11_vxfja"]
 
 [sub_resource type="Animation" id="Animation_r7d8d"]
 length = 0.001
@@ -24,6 +27,66 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(0, 25)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Verificator/Tea:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Verificator/Syrup:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Verificator/Bubble:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Verificator/Redo:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Verificator/Next:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_lhbsf"]
@@ -56,10 +119,75 @@ tracks/1/keys = {
 }]
 }
 
+[sub_resource type="Animation" id="Animation_fsit2"]
+resource_name = "validation"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Verificator/Tea:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Verificator/Syrup:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Verificator/Bubble:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.5, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Verificator/Redo:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(2.5, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Verificator/Next:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(2.5, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_culu3"]
 _data = {
 "RESET": SubResource("Animation_r7d8d"),
-"personnage_in": SubResource("Animation_lhbsf")
+"personnage_in": SubResource("Animation_lhbsf"),
+"validation": SubResource("Animation_fsit2")
 }
 
 [node name="Main" type="Control"]
@@ -83,10 +211,9 @@ texture = ExtResource("2_l4ynh")
 
 [node name="Personnage" type="TextureRect" parent="."]
 layout_mode = 2
-offset_left = -400.0
-offset_top = 250.0
-offset_right = 555.0
-offset_bottom = 1137.0
+offset_top = 25.0
+offset_right = 955.0
+offset_bottom = 912.0
 texture = ExtResource("3_15n8k")
 metadata/_edit_use_anchors_ = true
 
@@ -143,6 +270,7 @@ offset_bottom = 887.0
 texture = ExtResource("6_xlogm")
 
 [node name="Tea" type="TextureRect" parent="Verificator"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 offset_left = 45.0
 offset_top = 220.0
@@ -151,6 +279,7 @@ offset_bottom = 348.0
 texture = ExtResource("8_8e3eg")
 
 [node name="Syrup" type="TextureRect" parent="Verificator"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 offset_left = 222.0
 offset_top = 220.0
@@ -159,6 +288,7 @@ offset_bottom = 348.0
 texture = ExtResource("8_8e3eg")
 
 [node name="Bubble" type="TextureRect" parent="Verificator"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 offset_left = 408.0
 offset_top = 220.0
@@ -167,12 +297,16 @@ offset_bottom = 348.0
 texture = ExtResource("8_8e3eg")
 
 [node name="Redo" type="TextureButton" parent="Verificator"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 48.5
 offset_top = 620.0
 offset_right = 355.5
 offset_bottom = 706.0
 texture_normal = ExtResource("9_uf3h7")
+texture_pressed = ExtResource("10_uhkwg")
+texture_hover = ExtResource("11_vxfja")
+texture_disabled = ExtResource("10_fmwpd")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Verificator/Redo"]
 layout_mode = 1
@@ -187,12 +321,16 @@ text = "
 [center]Redo[/center]"
 
 [node name="Next" type="TextureButton" parent="Verificator"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 53.5
 offset_top = 722.0
 offset_right = 360.5
 offset_bottom = 808.0
 texture_normal = ExtResource("9_uf3h7")
+texture_pressed = ExtResource("10_uhkwg")
+texture_hover = ExtResource("11_vxfja")
+texture_disabled = ExtResource("10_fmwpd")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Verificator/Next"]
 layout_mode = 1
