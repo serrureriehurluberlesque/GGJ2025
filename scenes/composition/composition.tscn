@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://6kw3g6bmikqu"]
+[gd_scene load_steps=7 format=3 uid="uid://6kw3g6bmikqu"]
 
 [ext_resource type="Script" path="res://scenes/composition/composition.gd" id="1_8q7nh"]
 [ext_resource type="Texture2D" uid="uid://b0sym27jvssew" path="res://assets/decor_2.png" id="2_yqh0c"]
@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://bolqyromgna0w" path="res://assets/the.png" id="4_12rl6"]
 [ext_resource type="Texture2D" uid="uid://c856wc8xt7bix" path="res://assets/bubbles.png" id="5_qk1ry"]
 [ext_resource type="Texture2D" uid="uid://ctgcmvx2qe8rx" path="res://assets/sirop.png" id="6_xjcdl"]
-[ext_resource type="Texture2D" uid="uid://dt28dx32r4u8m" path="res://assets/verre_fini.png" id="7_j4k0i"]
 
 [node name="Composition" type="Control"]
 layout_mode = 3
@@ -51,13 +50,6 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("6_xjcdl")
-
-[node name="verre_plein" type="TextureRect" parent="."]
-visible = false
-layout_mode = 0
-offset_right = 958.0
-offset_bottom = 875.0
-texture = ExtResource("7_j4k0i")
 
 [node name="TypeSelection" type="MarginContainer" parent="."]
 custom_minimum_size = Vector2(10, 10)

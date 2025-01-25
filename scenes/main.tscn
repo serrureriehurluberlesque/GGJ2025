@@ -160,7 +160,6 @@ text = "
 
 [node name="Composition" parent="." instance=ExtResource("3_pdncn")]
 visible = false
-layout_mode = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
