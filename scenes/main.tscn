@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://c4ivvsabqt0xl"]
+[gd_scene load_steps=22 format=3 uid="uid://c4ivvsabqt0xl"]
 
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_5kc4h"]
 [ext_resource type="Texture2D" uid="uid://bbmx6433by8vj" path="res://assets/decor_1_back.png" id="2_l4ynh"]
@@ -6,10 +6,14 @@
 [ext_resource type="Texture2D" uid="uid://f1gblkmobf8q" path="res://assets/client_1.png" id="3_15n8k"]
 [ext_resource type="PackedScene" uid="uid://6kw3g6bmikqu" path="res://scenes/composition/composition.tscn" id="3_pdncn"]
 [ext_resource type="Texture2D" uid="uid://c213xk8i85ujg" path="res://assets/bulle_texte.png" id="4_n303t"]
+[ext_resource type="Texture2D" uid="uid://bxgyt8kdi7j2p" path="res://assets/verre_fond.png" id="6_xeclu"]
 [ext_resource type="Texture2D" uid="uid://txbd58q0vhv" path="res://assets/feedback.png" id="6_xlogm"]
 [ext_resource type="Texture2D" uid="uid://dt28dx32r4u8m" path="res://assets/verre_fini.png" id="7_k06tq"]
+[ext_resource type="Texture2D" uid="uid://durr5bk2d1bp7" path="res://assets/toppings/black.png" id="8_0rrxk"]
 [ext_resource type="Texture2D" uid="uid://dof2tb8konjji" path="res://icon.svg" id="8_8e3eg"]
 [ext_resource type="Texture2D" uid="uid://egfp342sfpk8" path="res://assets/bouton_craft_2.png" id="9_uf3h7"]
+[ext_resource type="Texture2D" uid="uid://bgwn5x0kmbciu" path="res://assets/toppings/hibiscus.png" id="9_w4knc"]
+[ext_resource type="Texture2D" uid="uid://g8m0juelc75c" path="res://assets/toppings/tapioca.png" id="10_3jvx0"]
 [ext_resource type="Texture2D" uid="uid://bb68no8bax3ek" path="res://assets/bouton_craft_2_disabled.png" id="10_fmwpd"]
 [ext_resource type="Texture2D" uid="uid://dpw1n3gqjcmt7" path="res://assets/bouton_craft_2_pressed.png" id="10_uhkwg"]
 [ext_resource type="Texture2D" uid="uid://cpnh2joxosm2d" path="res://assets/bouton_craft_2_hover.png" id="11_vxfja"]
@@ -256,11 +260,46 @@ offset_right = 1000.0
 offset_bottom = 910.0
 metadata/_edit_use_anchors_ = true
 
+[node name="Verrefond" type="TextureRect" parent="Verificator"]
+layout_mode = 2
+offset_left = -35.5
+offset_right = 964.5
+offset_bottom = 910.0
+texture = ExtResource("6_xeclu")
+
 [node name="Verre" type="TextureRect" parent="Verificator"]
 layout_mode = 2
 offset_left = -35.5
 offset_right = 922.5
 offset_bottom = 887.0
+texture = ExtResource("7_k06tq")
+
+[node name="Verre2" type="TextureRect" parent="Verificator"]
+layout_mode = 2
+offset_left = -35.5
+offset_right = 922.5
+offset_bottom = 887.0
+texture = ExtResource("8_0rrxk")
+
+[node name="Verre3" type="TextureRect" parent="Verificator"]
+layout_mode = 2
+offset_left = -35.5
+offset_right = 922.5
+offset_bottom = 887.0
+texture = ExtResource("9_w4knc")
+
+[node name="Verre4" type="TextureRect" parent="Verificator"]
+layout_mode = 2
+offset_left = -35.5
+offset_right = 922.5
+offset_bottom = 887.0
+texture = ExtResource("10_3jvx0")
+
+[node name="Verre5" type="TextureRect" parent="Verificator"]
+layout_mode = 2
+offset_left = -35.5
+offset_right = 964.5
+offset_bottom = 910.0
 texture = ExtResource("7_k06tq")
 
 [node name="Table" type="TextureRect" parent="Verificator"]
