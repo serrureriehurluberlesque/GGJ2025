@@ -52,12 +52,16 @@ func reset_all():
 	next_btn.set_disabled(false)
 	
 
-func init_n_start(ingredients_list, i, p, personnage_name):
+func init_n_start(ingredients_list, i, p, personnage_name, init_p):
 	reset_all()
 	ingredients = i
 	prompt_text = p
 	composition.init_toppings(ingredients_list)
-	init_personnage(personnage_name)
+	if init_p:
+		init_personnage(personnage_name)
+	else:
+		personnage.show()
+		init_prompt()
 
 func init_personnage(personnage_name):
 	personnage.set_texture(load("res://assets/" + personnage_name + ".png"))

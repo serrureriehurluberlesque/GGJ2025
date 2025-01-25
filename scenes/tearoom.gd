@@ -53,7 +53,7 @@ func _process(delta: float) -> void:
 func new_tapioc():	
 	p = choose_prompt()
 	c = next_client()
-	tea.init_n_start(toppings_list, p["toppings"], p["prompt_text"], "client_" + str(c))
+	tea.init_n_start(toppings_list, p["toppings"], p["prompt_text"], "client_" + str(c), true)
 
 func next_client():
 	var tmp = (c + 1) % 3
@@ -62,7 +62,7 @@ func next_client():
 	return tmp
 
 func redo_tapioc():
-	tea.init_n_start(toppings_list, p["toppings"], p["prompt_text"], "client_" + str(c))
+	tea.init_n_start(toppings_list, p["toppings"], p["prompt_text"], "client_" + str(c), false)
 
 func choose_prompt():
 	var j = 0
