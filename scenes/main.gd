@@ -34,7 +34,7 @@ func reset_all():
 func init_n_start(ingredients_list, i, p, personnage_name):
 	ingredients = i
 	prompt_text = p
-	# composition.init_toppings(ingredients_list)
+	composition.init_toppings(ingredients_list)
 	init_personnage(personnage_name)
 
 func init_personnage(personnage_name):
