@@ -56,13 +56,10 @@ func init_prompt():
 	animationplayer.play("prompt_in")
 
 func init_composition():
-	print(composition)
 	composition.connect("validate", init_verificator)
 	composition.show()
 
 func init_verificator(response):
-	print(response)
-	print(ingredients)
 	
 	var r = {}
 	r["Tea"] = "hanamaru" if response["tea"] == ingredients[0]["key"] else "batsu"

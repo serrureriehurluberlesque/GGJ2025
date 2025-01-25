@@ -144,19 +144,6 @@ offset_right = 992.5
 offset_bottom = 887.0
 metadata/_edit_use_anchors_ = true
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Verificator"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-bbcode_enabled = true
-text = "
-
-[center]Il est nac ce bubble tea[/center]
-"
-
 [node name="Verre" type="TextureRect" parent="Verificator"]
 layout_mode = 2
 offset_left = -35.5
