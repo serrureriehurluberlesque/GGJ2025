@@ -83,10 +83,10 @@ func init_composition():
 func init_verificator(response):
 	
 	var r = {}
-	r["Tea"] = "hanamaru" if response["tea"] == ingredients[0] else "batsu"
-	r["Syrup"] = "hanamaru" if response["syrup"] == ingredients[1] else "batsu"
-	r["Bubble"] = "hanamaru" if response["bubble"] == ingredients[2] else "batsu"
-	var hanamaru = r["Tea"] == "hanamaru" and r["Syrup"] == "hanamaru" and r["Bubble"] == "hanamaru"
+	r["tea"] = "hanamaru" if response["tea"] == ingredients[0] else "batsu"
+	r["syrup"] = "hanamaru" if response["syrup"] == ingredients[1] else "batsu"
+	r["bubble"] = "hanamaru" if response["bubble"] == ingredients[2] else "batsu"
+	var hanamaru = r["tea"] == "hanamaru" and r["syrup"] == "hanamaru" and r["bubble"] == "hanamaru"
 	
 	personnage.modulate = Color(0.5, 0.5, 0.5)
 	background.modulate = Color(0.5, 0.5, 0.5)
@@ -95,9 +95,10 @@ func init_verificator(response):
 	prompt.hide()
 	composition.hide()
 	
-	for n in ["Tea", "Syrup", "Bubble"]:
+	for n in ["tea", "syrup", "bubble"]:
 		verificator.get_node(n).set_texture(load("res://assets/" + r[n] + ".png"))
 		verificator.get_node(n).modulate = Color(1, 1, 1, 0)
+		verificator.get_node("Verre_" + n).set_texture(load("res://assets/toppings/" + response[n] + ".png"))
 	
 	if hanamaru:
 		#redo_btn.set_disabled(true)
