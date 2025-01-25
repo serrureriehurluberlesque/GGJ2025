@@ -20,10 +20,11 @@ func _ready() -> void:
 	tea = main_scn.instantiate()
 	add_child(tea)
 	tea.connect("finished", next)
+	$Start.connect("pressed", start)
 	
 	c = randi() % 3 + 1
 	
-	new_tapioc()
+	
 
 func load_toppings():
 	var file = "res://assets/toppings.json"
@@ -80,7 +81,17 @@ func next(hanamaru):
 	if hanamaru:
 		print("gg")
 		difficulty_level += 1
-		new_tapioc()
+		if difficulty_level >= 4:
+			gg()
+		else:
+			new_tapioc()
 	else:
 		print("nab")
 		redo_tapioc()
+
+func gg():
+	$End.show()
+
+func start():
+	$Start.hide()
+	new_tapioc()
