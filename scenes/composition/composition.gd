@@ -118,8 +118,10 @@ func set_section_title() -> void:
 		title.text = "Choisissez le thé"
 	elif step_id == 1:
 		title.text = "Choisissez le sirop"
+		$SectionRect.texture = load("res://assets/bouton_craft_1_sirup.png")
 	else:
-		title.text = "Choisissez les perlesc"
+		title.text = "Choisissez les perles"
+		$SectionRect.texture = load("res://assets/bouton_craft_1_bubble.png")
 
 
 func _on_submit_pressed() -> void:
