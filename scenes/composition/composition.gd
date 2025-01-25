@@ -23,11 +23,8 @@ static var POSSIBLE_BUBBLES: Array = [
 	{"key": "pasteque", "title": "Black Tea", "descr": "Blabla black"},
 	{"key": "cerise", "title": "Maté", "descr": "Blabla maté"},
 	{"key": "fraise", "title": "Hibiscus", "descr": "Blabla"},
-	{"key": "litchi", "title": "Black Tea", "descr": "Blabla black"},
-	{"key": "ananas", "title": "Maté", "descr": "Blabla maté"},
-	{"key": "fraise", "title": "Hibiscus", "descr": "Blabla"},
-	{"key": "litchi", "title": "Black Tea", "descr": "Blabla black"},
-	{"key": "ananas", "title": "Maté", "descr": "Blabla maté"},
+	{"key": "litchi", "title": "Litchi", "descr": "Blabla black"},
+	{"key": "ananas", "title": "Ananas", "descr": "Blabla maté"},
 ]
 
 @onready var title: Label = %SectionTitle
@@ -90,7 +87,10 @@ func make_choice(key: String) -> void:
 	
 	# Disable choices
 	for n in %List.get_children():
-		n.disabled = true
+		if n.key != key:
+			n.disabled = true
+		else:
+			n.texture_normal = n.texture_hover
 
 func prepare_next() -> void:	
 	if chosen_tea and chosen_syrup and chosen_bubble:
