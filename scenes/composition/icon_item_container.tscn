@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dmujsrnw1l4lj"]
+[gd_scene load_steps=7 format=3 uid="uid://dmujsrnw1l4lj"]
 
 [ext_resource type="Script" path="res://scenes/composition/icon_item_container.gd" id="1_bpcd2"]
 [ext_resource type="Texture2D" uid="uid://dpw1n3gqjcmt7" path="res://assets/bouton_craft_2_pressed.png" id="2_7prok"]
@@ -10,15 +10,12 @@
 font_weight = 600
 subpixel_positioning = 0
 
-[sub_resource type="SystemFont" id="SystemFont_l1sdb"]
-subpixel_positioning = 0
-
 [node name="IconItemContainer" type="TextureButton"]
 anchors_preset = -1
 anchor_left = 0.0125261
 anchor_top = 0.0293123
-anchor_right = 0.997912
-anchor_bottom = 0.468997
+anchor_right = 0.332985
+anchor_bottom = 0.126268
 grow_horizontal = 2
 grow_vertical = 2
 mouse_default_cursor_shape = 2
@@ -32,42 +29,34 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Margin" type="MarginContainer" parent="."]
 layout_mode = 2
-anchor_right = 1.0
-anchor_bottom = 1.0
-theme_override_constants/margin_left = 25
+anchor_right = 0.983713
+anchor_bottom = 0.918605
+theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 15
-theme_override_constants/margin_right = 25
+theme_override_constants/margin_right = 15
 theme_override_constants/margin_bottom = 15
 metadata/_edit_use_anchors_ = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Margin"]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Margin/HBoxContainer"]
+[node name="TitleMargin" type="MarginContainer" parent="Margin/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.5
 
-[node name="Title" type="Label" parent="Margin/HBoxContainer/VBoxContainer"]
+[node name="Title" type="Label" parent="Margin/HBoxContainer/TitleMargin"]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_vertical = 3
-size_flags_stretch_ratio = 0.42
+size_flags_vertical = 1
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = SubResource("SystemFont_6nnth")
 text = "Title"
 
-[node name="Description" type="Label" parent="Margin/HBoxContainer/VBoxContainer"]
-unique_name_in_owner = true
-visible = false
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = SubResource("SystemFont_l1sdb")
-
 [node name="IconMargin" type="MarginContainer" parent="Margin/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.71
+size_flags_stretch_ratio = 0.5
 
 [node name="Icon" type="TextureRect" parent="Margin/HBoxContainer/IconMargin"]
 unique_name_in_owner = true

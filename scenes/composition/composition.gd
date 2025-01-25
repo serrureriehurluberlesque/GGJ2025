@@ -8,7 +8,7 @@ var step_id: int = 0
 static var POSSIBLE_TEAS: Array = [
 	{"key": "green", "title": "Green Tea", "descr": "Blabla green"},
 	{"key": "black", "title": "Black Tea", "descr": "Blabla black"},
-	{"key": "mate", "title": "Maté", "descr": "Blabla maté"},
+	{"key": "mate", "title": "Maté", "descr": "Fruit du framboisier. Facilite le transit intestinal."},
 ]
 static var POSSIBLE_SYRUPS: Array = [
 	{"key": "hibiscus", "title": "Hibiscus", "descr": "Blabla"},
@@ -34,6 +34,7 @@ var all_toppings = []
 var chosen_tea = ""
 var chosen_syrup = ""
 var chosen_bubble = ""
+var selected_key = ""
 
 const scene_item = "res://scenes/composition/icon_item_container.tscn"
 
@@ -67,13 +68,25 @@ func populate_list() -> void:
 		item.item_title = tea["title"]
 		item.item_descr = tea["descr"]
 		item.key = tea["key"]
-		item.connect("chosen", make_choice)
+		item.connect("chosen", show_description)
 		%List.add_child(item)
 		
 	set_section_title()
 	
+func show_description(description: String, key: String) -> void:
+	$DescrBubble.visible = true
+	%Description.text = description
+	selected_key = key
+	# Make choices look disabled
+	for n in %List.get_children():
+		if n.key != key:
+			n.texture_normal = n.texture_disabled
+		else:
+			n.texture_normal = load("res://assets/bouton_craft_2.png")
+	
 func make_choice(key: String) -> void:
 	print(key)
+	$DescrBubble.visible = false
 	
 	if step_id == 0:
 		chosen_tea = key
@@ -106,4 +119,10 @@ func set_section_title() -> void:
 	elif step_id == 1:
 		title.text = "Choisissez le sirop"
 	else:
-		title.text = "Choisissez les perles"
+		title.text = "Choisissez les perlesc"
+
+
+func _on_submit_pressed() -> void:
+	if selected_key:
+		make_choice(selected_key)
+		
