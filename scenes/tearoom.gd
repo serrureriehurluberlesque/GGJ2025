@@ -31,7 +31,11 @@ func load_toppings():
 	var file = "res://assets/toppings.json"
 	var json_as_text = FileAccess.get_file_as_string(file)
 	var json_as_dict = JSON.parse_string(json_as_text)
+	
 	toppings_list = json_as_dict
+	for ts in toppings_list:
+		for t in ts:
+			t["color"] = Color(t["color"])
 
 func load_prompt():
 	var file = "res://assets/prompt.json"
