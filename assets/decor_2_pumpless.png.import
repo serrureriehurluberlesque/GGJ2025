@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfxdxp7nmtfhy"
-path="res://.godot/imported/theiere.jpg-7e74f7b1cc3cb920ae9601aa841b82da.ctex"
+uid="uid://dvap80laic0to"
+path="res://.godot/imported/decor_2_pumpless.png-f081f9a2140996371765d9d843da82cd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/theiere.jpg"
-dest_files=["res://.godot/imported/theiere.jpg-7e74f7b1cc3cb920ae9601aa841b82da.ctex"]
+source_file="res://assets/decor_2_pumpless.png"
+dest_files=["res://.godot/imported/decor_2_pumpless.png-f081f9a2140996371765d9d843da82cd.ctex"]
 
 [params]
 
