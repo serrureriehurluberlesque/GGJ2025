@@ -1,5 +1,5 @@
 [
     {"prompt_text": "Le premier bouton à chaque fois", "duration_prompt": 1, "toppings":["green", "citron", "tapioca"], "dificulty": 1},
-    {"prompt_text": "Bla bla je veux un thé rose avec un peu de café et aussi une petite coupelle de drogue", "duration_prompt": 8, "toppings":["black", "framboise", "pasteque"], "dificulty": 2},
-    {"prompt_text": "Le jeu", "duration_prompt": 10, "toppings":["mate", "myrtille", "cerise"], "dificulty": 3},
+    {"prompt_text": "Bla bla je veux un thé rose avec un peu de café et aussi une petite coupelle de drogue", "duration_prompt": 3, "toppings":["black", "framboise", "pasteque"], "dificulty": 2},
+    {"prompt_text": "Le jeu", "duration_prompt": 3, "toppings":["mate", "myrtille", "cerise"], "dificulty": 3},
 ]
