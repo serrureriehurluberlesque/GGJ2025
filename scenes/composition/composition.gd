@@ -77,7 +77,10 @@ func make_choice(key: String) -> void:
 	else:
 		chosen_bubble = key
 		$composition_player.play("add_bubbles")
-
+	
+	# Disable choices
+	for n in %List.get_children():
+		n.disabled = true
 
 func prepare_next() -> void:	
 	if chosen_tea and chosen_syrup and chosen_bubble:
