@@ -45,10 +45,6 @@ func load_prompt():
 			if not isok:
 				print("missing toppings for prompt")
 				print(pr)
-	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
 
 func new_tapioc():	
 	p = choose_prompt()
@@ -66,19 +62,19 @@ func redo_tapioc():
 
 func choose_prompt():
 	var j = 0
-	var indice
+	var indice = -1
 	for prompt in prompts:
 		if prompt["dificulty"] == difficulty_level:
 			indice = j
 		j += 1
 	
-	if not indice:
+	if indice == -1:
 		print("missing prompt of dificulty", difficulty_level)
-	
-	var pr = prompts[indice]
-	prompts.remove_at(indice)
-	
-	return pr
+		return prompts.pop_front()
+	else:
+		var pr = prompts[indice]
+		prompts.remove_at(indice)
+		return pr
 
 func next(hanamaru):
 	if hanamaru:

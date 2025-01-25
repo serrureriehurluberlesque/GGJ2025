@@ -29,6 +29,7 @@ func _ready() -> void:
 	redo_btn = $Verificator/Redo
 	next_btn = $Verificator/Next
 	
+	composition.connect("validate", init_verificator)
 	redo_btn.connect("pressed", redo)
 	next_btn.connect("pressed", next)
 
@@ -74,7 +75,6 @@ func init_prompt():
 	animationplayer.play("prompt_in")
 
 func init_composition():
-	composition.connect("validate", init_verificator)
 	composition.show()
 
 func init_verificator(response):
