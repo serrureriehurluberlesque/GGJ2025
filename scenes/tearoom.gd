@@ -4,11 +4,19 @@ var main_scn
 var tea
 var toppings_list = {}
 
+var p 
+var i
+var c
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	load_toppings()
 	
 	main_scn = load("res://scenes/main.tscn")
+	
+	tea = main_scn.instantiate()
+	add_child(tea)
+	tea.connect("finished", next)
 	
 	new_tapioc()
 
@@ -22,16 +30,14 @@ func load_toppings():
 func _process(delta: float) -> void:
 	pass
 
-func new_tapioc():
-	if tea:
-		tea.free()
-	
-	var p = choose_prompt()
-	var i = compute_ingredient(p)
-	
-	tea = main_scn.instantiate()
-	add_child(tea)
-	tea.init_n_start(toppings_list, compute_ingredient(p), p, "client_1")
+func new_tapioc():	
+	p = choose_prompt()
+	i = compute_ingredient(p)
+	c = "client_1"
+	tea.init_n_start(toppings_list, compute_ingredient(p), p, c)
+
+func redo_tapioc():
+	tea.init_n_start(toppings_list, compute_ingredient(p), p, c)
 
 func choose_prompt():
 	return "
@@ -44,3 +50,11 @@ func compute_ingredient(p):
 	for ts in toppings_list:
 		i.append(ts[0])
 	return i
+
+func next(hanamaru):
+	if hanamaru:
+		print("gg")
+		new_tapioc()
+	else:
+		print("nab")
+		redo_tapioc()

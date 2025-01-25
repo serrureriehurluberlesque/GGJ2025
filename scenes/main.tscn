@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://c4ivvsabqt0xl"]
+[gd_scene load_steps=15 format=3 uid="uid://c4ivvsabqt0xl"]
 
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_5kc4h"]
 [ext_resource type="Texture2D" uid="uid://bbmx6433by8vj" path="res://assets/decor_1_back.png" id="2_l4ynh"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://txbd58q0vhv" path="res://assets/feedback.png" id="6_xlogm"]
 [ext_resource type="Texture2D" uid="uid://dt28dx32r4u8m" path="res://assets/verre_fini.png" id="7_k06tq"]
 [ext_resource type="Texture2D" uid="uid://dof2tb8konjji" path="res://icon.svg" id="8_8e3eg"]
+[ext_resource type="Texture2D" uid="uid://egfp342sfpk8" path="res://assets/bouton_craft_2.png" id="9_uf3h7"]
 
 [sub_resource type="Animation" id="Animation_r7d8d"]
 length = 0.001
@@ -182,6 +183,47 @@ offset_top = 220.0
 offset_right = 536.0
 offset_bottom = 348.0
 texture = ExtResource("8_8e3eg")
+
+[node name="Redo" type="TextureButton" parent="Verificator"]
+layout_mode = 0
+offset_left = 48.5
+offset_top = 620.0
+offset_right = 355.5
+offset_bottom = 706.0
+texture_normal = ExtResource("9_uf3h7")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Verificator/Redo"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+bbcode_enabled = true
+text = "
+[center]Redo[/center]"
+
+[node name="Next" type="TextureButton" parent="Verificator"]
+layout_mode = 0
+offset_left = 53.5
+offset_top = 722.0
+offset_right = 360.5
+offset_bottom = 808.0
+texture_normal = ExtResource("9_uf3h7")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Verificator/Next"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+bbcode_enabled = true
+text = "
+[center]Next
+[/center]"
 
 [node name="Composition" parent="." instance=ExtResource("3_pdncn")]
 visible = false
