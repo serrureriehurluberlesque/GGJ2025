@@ -80,14 +80,12 @@ func choose_prompt():
 
 func next(hanamaru):
 	if hanamaru:
-		print("gg")
 		difficulty_level += 1
 		if difficulty_level >= 4:
 			gg()
 		else:
 			new_tapioc()
 	else:
-		print("nab")
 		redo_tapioc()
 
 func gg():
