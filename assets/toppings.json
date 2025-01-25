@@ -1,23 +1,23 @@
 [
     [
-        {"key": "green1", "title": "Thé vert", "descr": "Thé non oxydé, avec une faible teneur en caféine."},
-        {"key": "green2", "title": "Thé noir", "descr": "Thé oxydé, avec une teneur en caféine moyenne."},
-        {"key": "green3", "title": "Maté", "descr": "Infusion sud-américaine, riche en caféine."},
+        {"key": "green", "title": "Thé vert", "descr": "Thé non oxydé, avec une faible teneur en caféine."},
+        {"key": "black", "title": "Thé noir", "descr": "Thé oxydé, avec une teneur en caféine moyenne."},
+        {"key": "mate", "title": "Maté", "descr": "Infusion sud-américaine, riche en caféine."},
     ],                                     
     [                                      
-        {"key": "green4", "title": "Citron", "descr": "Agrume, fruit du citronnier. Acide."},
-        {"key": "green5", "title": "Framboise", "descr": "Fruit du framboisier. Facilite le transit intestinal."},
-        {"key": "green6", "title": "Myrtille", "descr": "Petites baies douces et légèrement sucrées."},
-        {"key": "green7", "title": "Kiwi", "descr": "Fruit originaire de Chine. Riche en vitamine C."},
-        {"key": "green8", "title": "Hibiscus", "descr": "Fleur nationale de la Corée du Sud."},
-        {"key": "green9", "title": "Miel", "descr": "Substance sucrée élaborée par les abeilles."},
+        {"key": "citron", "title": "Citron", "descr": "Agrume, fruit du citronnier. Acide."},
+        {"key": "framboise", "title": "Framboise", "descr": "Fruit du framboisier. Facilite le transit intestinal."},
+        {"key": "myrtille", "title": "Myrtille", "descr": "Petites baies douces et légèrement sucrées."},
+        {"key": "kiwi", "title": "Kiwi", "descr": "Fruit originaire de Chine. Riche en vitamine C."},
+        {"key": "hibiscus", "title": "Hibiscus", "descr": "Fleur nationale de la Corée du Sud."},
+        {"key": "miel", "title": "Miel", "descr": "Substance sucrée élaborée par les abeilles."},
     ],                                     
     [                                      
-        {"key": "green10", "title": "Tapioca", "descr": "Fécule issue des racines du manioc amer."},
-        {"key": "green11", "title": "Pastèque", "descr": "Fruit composé à plus de 90% d'eau."},
-        {"key": "green12", "title": "Cerise", "descr": "Fruit comestible du cerisier."},
-        {"key": "green13", "title": "Litchi", "descr": "Fruit tropical d'origine asiatique."},
-        {"key": "green14", "title": "Ananas", "descr": "Fruit multiple couronné de feuilles."},
-        {"key": "green15", "title": "Mochi", "descr": "Préparation à base de riz gluant. Visqueux."},
+        {"key": "tapioca", "title": "Tapioca", "descr": "Fécule issue des racines du manioc amer."},
+        {"key": "pasteque", "title": "Pastèque", "descr": "Fruit composé à plus de 90% d'eau."},
+        {"key": "cerise", "title": "Cerise", "descr": "Fruit comestible du cerisier."},
+        {"key": "litchi", "title": "Litchi", "descr": "Fruit tropical d'origine asiatique."},
+        {"key": "ananas", "title": "Ananas", "descr": "Fruit multiple couronné de feuilles."},
+        {"key": "mochi", "title": "Mochi", "descr": "Préparation à base de riz gluant. Visqueux."},
     ]
 ]
