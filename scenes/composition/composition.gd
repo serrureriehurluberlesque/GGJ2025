@@ -102,8 +102,8 @@ func prepare_next() -> void:
 
 func set_section_title() -> void:
 	if step_id == 0:
-		title.text = "Choose the tea"
+		title.text = "Choisissez le thé"
 	elif step_id == 1:
-		title.text = "Choose the syrup"
+		title.text = "Choisissez le sirop"
 	else:
-		title.text = "Choose the toppings"
+		title.text = "Choisissez les perles"
