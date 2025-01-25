@@ -14,15 +14,35 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_bmmsd")
 
-[node name="Start" type="TextureButton" parent="."]
-top_level = true
+[node name="Control" type="Control" parent="."]
 layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+metadata/_edit_use_anchors_ = true
+
+[node name="Start" type="TextureButton" parent="Control"]
+z_index = 1
+layout_mode = 2
+offset_right = 958.0
+offset_bottom = 884.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+button_mask = 7
 texture_normal = ExtResource("2_ts6t2")
 
-[node name="End" type="TextureRect" parent="."]
+[node name="End" type="TextureRect" parent="Control"]
 visible = false
-top_level = true
+z_index = 1
 layout_mode = 2
+offset_right = 958.0
+offset_bottom = 884.0
 texture = ExtResource("3_p4kau")
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_left = -500.0
+offset_top = -500.0
+offset_bottom = 1500.0
+color = Color(0, 0, 0, 1)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

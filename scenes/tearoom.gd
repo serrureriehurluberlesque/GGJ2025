@@ -19,8 +19,9 @@ func _ready() -> void:
 	
 	tea = main_scn.instantiate()
 	add_child(tea)
+	move_child(tea, 0)
 	tea.connect("finished", next)
-	$Start.connect("pressed", start)
+	$Control/Start.connect("pressed", start)
 	
 	c = randi() % 3 + 1
 	
@@ -90,8 +91,8 @@ func next(hanamaru):
 		redo_tapioc()
 
 func gg():
-	$End.show()
+	$Control/End.show()
 
 func start():
-	$Start.hide()
+	$Control/Start.hide()
 	new_tapioc()
