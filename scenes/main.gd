@@ -72,7 +72,7 @@ func init_personnage(personnage_name):
 	animationplayer.play("personnage_in")
 
 func init_prompt():
-	prompt.get_node("RichTextLabel").text = prompt_text
+	%PromptText.text = prompt_text
 	prompt.show()
 	
 	await get_tree().create_timer(duration_prompt).timeout
