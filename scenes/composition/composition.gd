@@ -46,6 +46,7 @@ func _ready() -> void:
 	set_section_title()
 	
 func init_toppings(ingredients_list: Array) -> void:
+	step_id = 0
 	all_toppings = ingredients_list
 	populate_list()
 			
