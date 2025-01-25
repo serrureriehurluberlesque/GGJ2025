@@ -1,10 +1,11 @@
-[gd_scene load_steps=23 format=3 uid="uid://6kw3g6bmikqu"]
+[gd_scene load_steps=24 format=3 uid="uid://6kw3g6bmikqu"]
 
 [ext_resource type="Script" path="res://scenes/composition/composition.gd" id="1_8q7nh"]
 [ext_resource type="Texture2D" uid="uid://wuogjxb7m8cq" path="res://assets/syrup_pump.png" id="2_m5yj8"]
 [ext_resource type="Texture2D" uid="uid://dvap80laic0to" path="res://assets/decor_2_pumpless.png" id="3_aoqim"]
 [ext_resource type="Texture2D" uid="uid://c8g462a5ygog8" path="res://assets/verre_vide.png" id="3_iuv2l"]
 [ext_resource type="Texture2D" uid="uid://bolqyromgna0w" path="res://assets/the.png" id="4_12rl6"]
+[ext_resource type="Texture2D" uid="uid://b4qrclnyb6oep" path="res://assets/syrup_pump_cover.png" id="4_c2l0h"]
 [ext_resource type="Texture2D" uid="uid://c856wc8xt7bix" path="res://assets/bubbles.png" id="5_qk1ry"]
 [ext_resource type="Texture2D" uid="uid://ctgcmvx2qe8rx" path="res://assets/sirop.png" id="6_xjcdl"]
 [ext_resource type="Texture2D" uid="uid://chmlhfkqq4xxm" path="res://assets/bouton_craft_1.png" id="7_jbqnm"]
@@ -377,17 +378,23 @@ grow_vertical = 2
 script = ExtResource("1_8q7nh")
 metadata/_edit_use_anchors_ = true
 
-[node name="syrup_pump" type="TextureRect" parent="."]
-layout_mode = 0
-offset_right = 960.0
-offset_bottom = 884.0
-texture = ExtResource("2_m5yj8")
-
 [node name="Background" type="TextureRect" parent="."]
 layout_mode = 0
 offset_right = 956.0
 offset_bottom = 885.0
 texture = ExtResource("3_aoqim")
+
+[node name="syrup_pump" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1000.0
+offset_bottom = 910.0
+texture = ExtResource("2_m5yj8")
+
+[node name="back_front_ground" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("4_c2l0h")
 
 [node name="verre_vide" type="TextureRect" parent="."]
 layout_mode = 1
@@ -473,10 +480,10 @@ speed_scale = 3.0
 [node name="theiere" type="TextureRect" parent="."]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
-offset_left = 739.0
-offset_top = 240.0
-offset_right = 908.0
-offset_bottom = 410.0
+offset_left = 718.0
+offset_top = 297.0
+offset_right = 1041.0
+offset_bottom = 653.0
 texture = ExtResource("12_dvh0g")
 
 [node name="DescrBubble" type="TextureRect" parent="."]
@@ -496,7 +503,7 @@ anchor_bottom = 1.0
 offset_left = 15.0
 offset_top = 18.0
 offset_right = -13.0
-offset_bottom = -118.0
+offset_bottom = -86.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 30
@@ -512,10 +519,10 @@ autowrap_mode = 3
 
 [node name="Submit" type="TextureButton" parent="DescrBubble"]
 layout_mode = 0
-offset_left = 48.0
-offset_top = 138.0
-offset_right = 271.0
-offset_bottom = 197.0
+offset_left = 52.0
+offset_top = 160.0
+offset_right = 275.0
+offset_bottom = 219.0
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("15_nnlah")
 texture_pressed = ExtResource("16_s61ik")
