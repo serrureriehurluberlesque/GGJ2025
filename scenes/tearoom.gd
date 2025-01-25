@@ -8,6 +8,7 @@ var prompts = []
 var p 
 var c
 var i
+var difficulty_level = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -64,11 +65,25 @@ func redo_tapioc():
 	tea.init_n_start(toppings_list, p["toppings"], p["prompt_text"], "client_" + str(c))
 
 func choose_prompt():
-	return prompts.pop_front()
+	var j = 0
+	var indice
+	for prompt in prompts:
+		if prompt["dificulty"] == difficulty_level:
+			indice = j
+		j += 1
+	
+	if not indice:
+		print("missing prompt of dificulty", difficulty_level)
+	
+	var pr = prompts[indice]
+	prompts.remove_at(indice)
+	
+	return pr
 
 func next(hanamaru):
 	if hanamaru:
 		print("gg")
+		difficulty_level += 1
 		new_tapioc()
 	else:
 		print("nab")
