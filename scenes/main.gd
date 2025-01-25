@@ -12,8 +12,8 @@ var frontground
 var prompt
 var composition
 var verificator
-var redo_btn
-var next_btn
+var redo_or_next_btn
+
 
 var animationplayer
 
@@ -27,12 +27,11 @@ func _ready() -> void:
 	
 	animationplayer = $AnimationPlayer
 	
-	redo_btn = $Verificator/Redo
-	next_btn = $Verificator/Next
+	redo_or_next_btn = $Verificator/RedoOrNext
 	
 	composition.connect("validate", init_verificator)
-	redo_btn.connect("pressed", redo)
-	next_btn.connect("pressed", next)
+	#redo_btn.connect("pressed", redo)
+	#next_btn.connect("pressed", next)
 
 func reset_all():
 	composition.hide()
@@ -44,14 +43,13 @@ func reset_all():
 	personnage.modulate = Color(1, 1, 1)
 	background.modulate = Color(1, 1, 1)
 	frontground.modulate = Color(1, 1, 1)
-	redo_btn.modulate = Color(1, 1, 1)
-	next_btn.modulate = Color(1, 1, 1)
+	redo_or_next_btn.modulate = Color(1, 1, 1)
 	
 	prompt_text = ""
 	ingredients = {}
 	
-	redo_btn.set_disabled(false)
-	next_btn.set_disabled(false)
+	#redo_btn.set_disabled(false)
+	#next_btn.set_disabled(false)
 	
 
 func init_n_start(ingredients_list, i, p, dp, personnage_name, init_p):
@@ -72,7 +70,7 @@ func init_personnage(personnage_name):
 	animationplayer.play("personnage_in")
 
 func init_prompt():
-	prompt.get_node("RichTextLabel").text = prompt_text
+	%PromptText.text = prompt_text
 	prompt.show()
 	
 	await get_tree().create_timer(duration_prompt).timeout
@@ -102,12 +100,16 @@ func init_verificator(response):
 		verificator.get_node(n).modulate = Color(1, 1, 1, 0)
 	
 	if hanamaru:
-		redo_btn.set_disabled(true)
-	else:
-		next_btn.set_disabled(true)
+		#redo_btn.set_disabled(true)
+		redo_or_next_btn.connect("pressed", next)
+		%ButtonText.text = "Suivant"
 	
-	redo_btn.modulate = Color(1, 1, 1, 0)
-	next_btn.modulate = Color(1, 1, 1, 0)
+	else:
+		#next_btn.set_disabled(true)
+		redo_or_next_btn.connect("pressed", redo)
+		%ButtonText.text = "Ré-essayer"
+	
+	redo_or_next_btn.modulate = Color(1, 1, 1, 0)
 	
 	verificator.show()
 	animationplayer.play("validation")
