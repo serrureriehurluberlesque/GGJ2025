@@ -12,8 +12,10 @@ subpixel_positioning = 0
 
 [node name="IconItemContainer" type="TextureButton"]
 anchors_preset = -1
-anchor_right = 0.998264
-anchor_bottom = 0.469136
+anchor_left = 0.0125261
+anchor_top = 0.0293123
+anchor_right = 0.997912
+anchor_bottom = 0.468997
 grow_horizontal = 2
 grow_vertical = 2
 action_mode = 0

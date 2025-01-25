@@ -1,26 +1,63 @@
-[gd_scene load_steps=3 format=3 uid="uid://6kw3g6bmikqu"]
+[gd_scene load_steps=8 format=3 uid="uid://6kw3g6bmikqu"]
 
 [ext_resource type="Script" path="res://scenes/composition/composition.gd" id="1_8q7nh"]
-[ext_resource type="Texture2D" uid="uid://dof2tb8konjji" path="res://icon.svg" id="3_cxm2p"]
+[ext_resource type="Texture2D" uid="uid://b0sym27jvssew" path="res://assets/decor_2.png" id="2_yqh0c"]
+[ext_resource type="Texture2D" uid="uid://c8g462a5ygog8" path="res://assets/verre_vide.png" id="3_iuv2l"]
+[ext_resource type="Texture2D" uid="uid://bolqyromgna0w" path="res://assets/the.png" id="4_12rl6"]
+[ext_resource type="Texture2D" uid="uid://c856wc8xt7bix" path="res://assets/bubbles.png" id="5_qk1ry"]
+[ext_resource type="Texture2D" uid="uid://ctgcmvx2qe8rx" path="res://assets/sirop.png" id="6_xjcdl"]
+[ext_resource type="Texture2D" uid="uid://dt28dx32r4u8m" path="res://assets/verre_fini.png" id="7_j4k0i"]
 
 [node name="Composition" type="Control"]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -958.0
+offset_bottom = -887.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_8q7nh")
 metadata/_edit_use_anchors_ = true
 
-[node name="Background" type="ColorRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
 layout_mode = 0
 offset_right = 956.0
 offset_bottom = 885.0
+texture = ExtResource("2_yqh0c")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="verre_vide" type="TextureRect" parent="."]
+layout_mode = 1
+texture = ExtResource("3_iuv2l")
+metadata/_edit_use_anchors_ = true
+
+[node name="tea" type="TextureRect" parent="."]
 visible = false
-layout_mode = 2
-offset_top = 169.0
-offset_right = 375.0
-offset_bottom = 297.0
-texture = ExtResource("3_cxm2p")
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("4_12rl6")
+
+[node name="bubbles" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("5_qk1ry")
+
+[node name="sirop" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("6_xjcdl")
+
+[node name="verre_plein" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 958.0
+offset_bottom = 875.0
+texture = ExtResource("7_j4k0i")
 
 [node name="TypeSelection" type="MarginContainer" parent="."]
 custom_minimum_size = Vector2(10, 10)

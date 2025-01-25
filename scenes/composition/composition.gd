@@ -61,10 +61,13 @@ func make_choice(key: String) -> void:
 	
 	if step_id == 0:
 		chosen_tea = key
+		$tea.visible = true
 	elif step_id == 1:
 		chosen_syrup = key
+		$sirop.visible = true
 	else:
 		chosen_bubble = key
+		$bubbles.visible = true
 		
 	if chosen_tea and chosen_syrup and chosen_bubble:
 		validate.emit({"tea": chosen_tea, "syrup": chosen_syrup, "bubble": chosen_bubble})
