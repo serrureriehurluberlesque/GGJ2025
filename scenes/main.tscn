@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://c4ivvsabqt0xl"]
+[gd_scene load_steps=13 format=3 uid="uid://c4ivvsabqt0xl"]
 
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_5kc4h"]
 [ext_resource type="Texture2D" uid="uid://bbmx6433by8vj" path="res://assets/decor_1_back.png" id="2_l4ynh"]
@@ -6,9 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://f1gblkmobf8q" path="res://assets/client_1.png" id="3_15n8k"]
 [ext_resource type="PackedScene" uid="uid://6kw3g6bmikqu" path="res://scenes/composition/composition.tscn" id="3_pdncn"]
 [ext_resource type="Texture2D" uid="uid://c213xk8i85ujg" path="res://assets/bulle_texte.png" id="4_n303t"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_rvwxc"]
-load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
+[ext_resource type="Texture2D" uid="uid://txbd58q0vhv" path="res://assets/feedback.png" id="6_xlogm"]
+[ext_resource type="Texture2D" uid="uid://dt28dx32r4u8m" path="res://assets/verre_fini.png" id="7_k06tq"]
 
 [sub_resource type="Animation" id="Animation_r7d8d"]
 length = 0.001
@@ -137,12 +136,11 @@ text = "
 "
 
 [node name="Verificator" type="TextureRect" parent="."]
-self_modulate = Color(0.277528, 0.277528, 0.277528, 1)
 layout_mode = 2
 offset_left = 35.5
 offset_right = 922.5
 offset_bottom = 887.0
-texture = SubResource("CompressedTexture2D_rvwxc")
+texture = ExtResource("6_xlogm")
 metadata/_edit_use_anchors_ = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Verificator"]
@@ -157,6 +155,13 @@ text = "
 
 [center]Il est nac ce bubble tea[/center]
 "
+
+[node name="Verre" type="TextureRect" parent="Verificator"]
+layout_mode = 2
+offset_left = -35.5
+offset_right = 922.5
+offset_bottom = 887.0
+texture = ExtResource("7_k06tq")
 
 [node name="Composition" parent="." instance=ExtResource("3_pdncn")]
 visible = false
