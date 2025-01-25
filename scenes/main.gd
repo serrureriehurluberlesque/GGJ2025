@@ -3,6 +3,7 @@ extends Control
 signal finished
 
 var prompt_text = ""
+var duration_prompt = 5
 var ingredients = {}
 
 var personnage
@@ -53,10 +54,11 @@ func reset_all():
 	next_btn.set_disabled(false)
 	
 
-func init_n_start(ingredients_list, i, p, personnage_name, init_p):
+func init_n_start(ingredients_list, i, p, dp, personnage_name, init_p):
 	reset_all()
 	ingredients = i
 	prompt_text = p
+	duration_prompt = dp
 	composition.init_toppings(ingredients_list)
 	if init_p:
 		init_personnage(personnage_name)
@@ -72,7 +74,10 @@ func init_personnage(personnage_name):
 func init_prompt():
 	prompt.get_node("RichTextLabel").text = prompt_text
 	prompt.show()
-	animationplayer.play("prompt_in")
+	
+	await get_tree().create_timer(duration_prompt).timeout
+	
+	init_composition()
 
 func init_composition():
 	composition.show()
