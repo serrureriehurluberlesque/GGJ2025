@@ -1,5 +1,5 @@
 [
-    {"prompt_text": "Le premier bouton à chaque fois", "duration_prompt": 5, "toppings":["green1", "green4", "green10"], "dificulty": 1},
+    {"prompt_text": "Le premier bouton à chaque fois", "duration_prompt": 5, "toppings":["green", "citron", "tapioca"], "dificulty": 1},
     {"prompt_text": "Bla bla je veux un thé rose avec un peu de café et aussi une petite coupelle de drogue", "duration_prompt": 8, "toppings":["green2", "green5", "green11"], "dificulty": 2},
     {"prompt_text": "Le jeu", "duration_prompt": 10, "toppings":["green3", "green6", "green12"], "dificulty": 3},
 ]
