@@ -30,6 +30,8 @@ static var POSSIBLE_BUBBLES: Array = [
 	{"key": "ananas", "title": "Maté", "descr": "Blabla maté"},
 ]
 
+@onready var title: Label = %SectionTitle
+
 var all_toppings = []
 
 var chosen_tea = ""
@@ -41,7 +43,7 @@ const scene_item = "res://scenes/composition/icon_item_container.tscn"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	init_toppings([POSSIBLE_TEAS, POSSIBLE_SYRUPS, POSSIBLE_BUBBLES])
-	pass
+	set_section_title()
 	
 func init_toppings(ingredients_list: Array) -> void:
 	all_toppings = ingredients_list
@@ -60,7 +62,8 @@ func populate_list() -> void:
 		item.key = tea["key"]
 		item.connect("chosen", make_choice)
 		%List.add_child(item)
-
+		
+	set_section_title()
 	
 func make_choice(key: String) -> void:
 	print(key)
@@ -83,3 +86,11 @@ func prepare_next() -> void:
 		step_id += 1
 		
 		populate_list()
+
+func set_section_title() -> void:
+	if step_id == 0:
+		title.text = "Choose the tea"
+	elif step_id == 1:
+		title.text = "Choose the syrup"
+	else:
+		title.text = "Choose the toppings"
