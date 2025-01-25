@@ -10,13 +10,14 @@ subpixel_positioning = 0
 [sub_resource type="SystemFont" id="SystemFont_l1sdb"]
 subpixel_positioning = 0
 
-[node name="IconItemContainer" type="TextureRect"]
+[node name="IconItemContainer" type="TextureButton"]
 anchors_preset = -1
 anchor_right = 0.998264
 anchor_bottom = 0.469136
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_k861c")
+action_mode = 0
+texture_normal = ExtResource("3_k861c")
 script = ExtResource("1_bpcd2")
 metadata/_edit_use_anchors_ = true
 
@@ -24,10 +25,10 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
-theme_override_constants/margin_left = 50
-theme_override_constants/margin_top = 50
-theme_override_constants/margin_right = 50
-theme_override_constants/margin_bottom = 50
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 15
 metadata/_edit_use_anchors_ = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Margin"]
@@ -62,3 +63,5 @@ size_flags_stretch_ratio = 0.71
 [node name="Icon" type="TextureRect" parent="Margin/HBoxContainer/IconMargin"]
 unique_name_in_owner = true
 layout_mode = 2
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

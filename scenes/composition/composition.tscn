@@ -11,8 +11,8 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Background" type="ColorRect" parent="."]
 layout_mode = 0
-offset_right = 1154.0
-offset_bottom = 644.0
+offset_right = 956.0
+offset_bottom = 885.0
 
 [node name="TextureRect" type="TextureRect" parent="."]
 visible = false
@@ -30,26 +30,8 @@ offset_bottom = 591.0
 metadata/_edit_use_anchors_ = true
 
 [node name="List" type="VBoxContainer" parent="TypeSelection"]
+unique_name_in_owner = true
 layout_mode = 2
 
 [node name="HSeparator" type="HSeparator" parent="TypeSelection/List"]
 layout_mode = 2
-
-[node name="Button" type="Button" parent="."]
-layout_mode = 0
-offset_left = 390.0
-offset_top = 411.0
-offset_right = 562.0
-offset_bottom = 478.0
-action_mode = 0
-
-[node name="Label" type="Label" parent="Button"]
-layout_mode = 2
-offset_left = 67.0
-offset_top = 22.0
-offset_right = 105.0
-offset_bottom = 45.0
-text = "EMIT"
-metadata/_edit_use_anchors_ = true
-
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

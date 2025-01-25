@@ -1,8 +1,11 @@
-extends TextureRect
+extends TextureButton
+
+signal chosen
 
 @onready var icon: TextureRect = %Icon
 @onready var title: Label = %Title
 @onready var description: Label = %Description
+@export var key: String
 
 @export var item_icon: Texture:
 	set(value): 
@@ -28,7 +31,10 @@ func _update_labels():
 	if icon:
 		icon.texture = item_icon
 	if title:
-		print("---")
 		title.text = item_title
 	if description:
 		description.text = item_descr
+
+
+func _on_pressed() -> void:
+	chosen.emit(key)
