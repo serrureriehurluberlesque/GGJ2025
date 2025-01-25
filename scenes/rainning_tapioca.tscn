@@ -25,6 +25,7 @@ color_ramp = SubResource("GradientTexture1D_td1x4")
 script = ExtResource("1_au1p6")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+position = Vector2(0, -400)
 emitting = false
 amount = 35
 process_material = SubResource("ParticleProcessMaterial_dpnp1")
