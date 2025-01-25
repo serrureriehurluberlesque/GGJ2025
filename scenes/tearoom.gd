@@ -6,11 +6,17 @@ var toppings_list = {}
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	load_toppings()
+	
 	main_scn = load("res://scenes/main.tscn")
-	# load toppings_list
-	toppings_list = [[{"key": "green", "name": "Green Tea", "description": "It is a tea, sometimes it's green"}], [{"key": "green2", "name": "Green Tea2", "description": "It is a tea, sometimes it's green2"}], [{"key": "green3", "name": "Green Tea3", "description": "It is a tea, sometimes it's green3"}]]
+	
 	new_tapioc()
 
+func load_toppings():
+	var file = "res://assets/toppings.json"
+	var json_as_text = FileAccess.get_file_as_string(file)
+	var json_as_dict = JSON.parse_string(json_as_text)
+	toppings_list = json_as_dict
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
