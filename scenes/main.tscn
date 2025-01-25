@@ -1,7 +1,8 @@
-[gd_scene load_steps=22 format=3 uid="uid://c4ivvsabqt0xl"]
+[gd_scene load_steps=23 format=3 uid="uid://c4ivvsabqt0xl"]
 
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_5kc4h"]
 [ext_resource type="Texture2D" uid="uid://bbmx6433by8vj" path="res://assets/decor_1_back.png" id="2_l4ynh"]
+[ext_resource type="Texture2D" uid="uid://clvjp57ax4646" path="res://assets/fond.png" id="2_og80g"]
 [ext_resource type="Texture2D" uid="uid://dg8c6fj6b2nvj" path="res://assets/decor_1.png" id="2_pfcld"]
 [ext_resource type="Texture2D" uid="uid://f1gblkmobf8q" path="res://assets/client_1.png" id="3_15n8k"]
 [ext_resource type="PackedScene" uid="uid://6kw3g6bmikqu" path="res://scenes/composition/composition.tscn" id="3_pdncn"]
@@ -162,6 +163,20 @@ tracks/3/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Jingle")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1.25),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_culu3"]
 _data = {
@@ -181,6 +196,12 @@ size_flags_horizontal = 6
 size_flags_vertical = 6
 script = ExtResource("1_5kc4h")
 metadata/_edit_use_anchors_ = true
+
+[node name="Background2" type="TextureRect" parent="."]
+layout_mode = 2
+offset_right = 1000.0
+offset_bottom = 930.0
+texture = ExtResource("2_og80g")
 
 [node name="Background" type="TextureRect" parent="."]
 layout_mode = 2
@@ -356,3 +377,5 @@ grow_vertical = 1
 libraries = {
 "": SubResource("AnimationLibrary_culu3")
 }
+
+[node name="Jingle" type="AudioStreamPlayer" parent="."]

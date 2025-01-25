@@ -104,11 +104,13 @@ func init_verificator(response):
 		#redo_btn.set_disabled(true)
 		redo_or_next_btn.connect("pressed", next)
 		%ButtonText.text = "Suivant"
+		$Jingle.stream = load("res://assets/sounds/Yay.wav")
 	
 	else:
 		#next_btn.set_disabled(true)
 		redo_or_next_btn.connect("pressed", redo)
 		%ButtonText.text = "Ré-essayer"
+		$Jingle.stream = load("res://assets/sounds/cringe.wav")
 	
 	redo_or_next_btn.modulate = Color(1, 1, 1, 0)
 	

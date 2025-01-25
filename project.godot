@@ -14,7 +14,7 @@ config/name="GGJ2025"
 run/main_scene="res://scenes/tearoom.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 boot_splash/bg_color=Color(0, 0, 0, 1)
-config/icon="res://icon.svg"
+config/icon="res://assets/icon.png"
 
 [display]
 

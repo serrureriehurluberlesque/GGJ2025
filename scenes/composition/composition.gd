@@ -85,7 +85,6 @@ func show_description(description: String, key: String) -> void:
 			n.texture_normal = load("res://assets/bouton_craft_2.png")
 	
 func make_choice(key: String) -> void:
-	print(key)
 	$DescrBubble.visible = false
 	
 	if step_id == 0:
