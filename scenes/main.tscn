@@ -200,13 +200,13 @@ metadata/_edit_use_anchors_ = true
 [node name="Background2" type="TextureRect" parent="."]
 layout_mode = 2
 offset_right = 1000.0
-offset_bottom = 930.0
+offset_bottom = 910.0
 texture = ExtResource("2_og80g")
 
 [node name="Background" type="TextureRect" parent="."]
 layout_mode = 2
 offset_right = 1000.0
-offset_bottom = 930.0
+offset_bottom = 910.0
 texture = ExtResource("2_l4ynh")
 
 [node name="Personnage" type="TextureRect" parent="."]
