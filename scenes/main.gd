@@ -76,9 +76,9 @@ func init_composition():
 func init_verificator(response):
 	
 	var r = {}
-	r["Tea"] = "hanamaru" if response["tea"] == ingredients[0]["key"] else "batsu"
-	r["Syrup"] = "hanamaru" if response["syrup"] == ingredients[1]["key"] else "batsu"
-	r["Bubble"] = "hanamaru" if response["bubble"] == ingredients[2]["key"] else "batsu"
+	r["Tea"] = "hanamaru" if response["tea"] == ingredients[0] else "batsu"
+	r["Syrup"] = "hanamaru" if response["syrup"] == ingredients[1] else "batsu"
+	r["Bubble"] = "hanamaru" if response["bubble"] == ingredients[2] else "batsu"
 	var hanamaru = r["Tea"] == "hanamaru" and r["Syrup"] == "hanamaru" and r["Bubble"] == "hanamaru"
 	
 	personnage.modulate = Color(0.5, 0.5, 0.5)
