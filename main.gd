@@ -2,7 +2,6 @@ extends Control
 
 var prompt_text = ""
 var ingredients = {}
-var ingredients_list = {}
 
 var personnage
 var prompt
@@ -12,7 +11,6 @@ var verificator
 var animationplayer
 
 func _ready() -> void:
-	# Faut load ingredients_list
 	personnage = $Personnage
 	prompt = $Prompt
 	verificator = $Verificator
@@ -31,21 +29,21 @@ func reset_all():
 	
 	prompt_text = ""
 	ingredients = {}
-	ingredients_list = {}
 	
-	init_personnage()
-	
-func compute_ingredient(p):
-	return {"tee": "green", "sirup": "hibiscus", "bubbles": "water"}
 
-func init_personnage():
+func init_n_start(ingredients_list, i, p, personnage_name):
+	ingredients = i
+	prompt_text = p
+	# composition.init_toppings(ingredients_list)
+	init_personnage(personnage_name)
+
+func init_personnage(personnage_name):
+	personnage.set_texture(load("res://assets/" + personnage_name + ".png"))
 	personnage.show()
 	animationplayer.play("personnage_in")
 
 func init_prompt():
-	prompt_text = "Le jeu"
-	ingredients = compute_ingredient(prompt_text)
-	
+	prompt.get_node("RichTextLabel").text = prompt_text
 	prompt.show()
 	animationplayer.play("prompt_in")
 
