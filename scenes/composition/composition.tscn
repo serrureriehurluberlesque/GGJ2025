@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://6kw3g6bmikqu"]
+[gd_scene load_steps=3 format=3 uid="uid://6kw3g6bmikqu"]
 
 [ext_resource type="Script" path="res://scenes/composition/composition.gd" id="1_8q7nh"]
-[ext_resource type="PackedScene" uid="uid://dmujsrnw1l4lj" path="res://scenes/composition/icon_item_container.tscn" id="1_d8chm"]
 [ext_resource type="Texture2D" uid="uid://dof2tb8konjji" path="res://icon.svg" id="3_cxm2p"]
 
 [node name="Composition" type="Control"]
@@ -32,13 +31,6 @@ metadata/_edit_use_anchors_ = true
 
 [node name="List" type="VBoxContainer" parent="TypeSelection"]
 layout_mode = 2
-
-[node name="Item1" type="MarginContainer" parent="TypeSelection/List"]
-layout_mode = 2
-
-[node name="IconItemContainer" parent="TypeSelection/List/Item1" instance=ExtResource("1_d8chm")]
-layout_mode = 2
-script = null
 
 [node name="HSeparator" type="HSeparator" parent="TypeSelection/List"]
 layout_mode = 2
