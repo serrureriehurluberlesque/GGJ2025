@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://c4ivvsabqt0xl"]
+[gd_scene load_steps=12 format=3 uid="uid://c4ivvsabqt0xl"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_5kc4h"]
+[ext_resource type="Texture2D" uid="uid://bbmx6433by8vj" path="res://assets/decor_1_back.png" id="2_l4ynh"]
 [ext_resource type="Texture2D" uid="uid://dg8c6fj6b2nvj" path="res://assets/decor_1.png" id="2_pfcld"]
 [ext_resource type="Texture2D" uid="uid://f1gblkmobf8q" path="res://assets/client_1.png" id="3_15n8k"]
 [ext_resource type="PackedScene" uid="uid://6kw3g6bmikqu" path="res://scenes/composition/composition.tscn" id="3_pdncn"]
@@ -14,14 +15,14 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("AspectRatioContainer/Background/Personnage:position")
+tracks/0/path = NodePath("Personnage:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-200, 250)]
+"values": [Vector2(0, 25)]
 }
 
 [sub_resource type="Animation" id="Animation_lhbsf"]
@@ -30,14 +31,14 @@ length = 5.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("AspectRatioContainer/Background/Personnage:position")
+tracks/0/path = NodePath("Personnage:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 4),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.0001, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(-200, 250), Vector2(200, 250)]
+"values": [Vector2(-400, 250), Vector2(-300, 25), Vector2(0, 25)]
 }
 tracks/1/type = "method"
 tracks/1/imported = false
@@ -90,56 +91,43 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_5kc4h")
 
-[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Background" type="TextureRect" parent="AspectRatioContainer"]
+[node name="Background" type="TextureRect" parent="."]
 layout_mode = 2
-texture = ExtResource("2_pfcld")
+offset_left = 3.0
+offset_right = 955.0
+offset_bottom = 887.0
+texture = ExtResource("2_l4ynh")
 
-[node name="Personnage" type="TextureRect" parent="AspectRatioContainer/Background"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = -0.285494
-anchor_top = -0.524691
-anchor_right = 0.99074
-anchor_bottom = 0.481481
-offset_left = 73.5033
-offset_top = 713.827
-offset_right = 201.504
-offset_bottom = 948.827
+[node name="Personnage" type="TextureRect" parent="."]
+layout_mode = 2
+offset_top = 25.0
+offset_right = 955.0
+offset_bottom = 912.0
 texture = ExtResource("3_15n8k")
 metadata/_edit_use_anchors_ = true
 
-[node name="Prompt" type="TextureRect" parent="AspectRatioContainer/Background"]
-self_modulate = Color(0.277528, 0.277528, 0.277528, 1)
-layout_mode = 1
-anchors_preset = -1
-anchor_left = -0.717593
-anchor_top = -0.262346
-anchor_right = 0.189815
-anchor_bottom = 0.82716
-offset_left = 236.0
-offset_top = 58.0
-offset_right = 606.0
-offset_bottom = 230.0
+[node name="Frontground" type="TextureRect" parent="."]
+layout_mode = 2
+offset_right = 958.0
+offset_bottom = 887.0
+texture = ExtResource("2_pfcld")
+
+[node name="Prompt" type="TextureRect" parent="."]
+layout_mode = 2
+offset_right = 958.0
+offset_bottom = 887.0
 texture = ExtResource("4_n303t")
 metadata/_edit_use_anchors_ = true
 
-[node name="RichTextLabel" type="RichTextLabel" parent="AspectRatioContainer/Background/Prompt"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Prompt"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 665.0
-offset_top = 243.0
-offset_right = -230.296
-offset_bottom = -705.123
+offset_left = 510.0
+offset_top = 167.0
+offset_right = -164.0
+offset_bottom = -517.0
 grow_horizontal = 2
 grow_vertical = 2
 bbcode_enabled = true
@@ -148,17 +136,16 @@ text = "
 [center]Bla bla je veux un thé rose avec un peu de café et aussi une petite coupelle de drogue[/center]
 "
 
-[node name="Verificator" type="TextureRect" parent="AspectRatioContainer/Background"]
+[node name="Verificator" type="TextureRect" parent="."]
 self_modulate = Color(0.277528, 0.277528, 0.277528, 1)
-layout_mode = 0
-offset_left = 236.0
-offset_top = 58.0
-offset_right = 606.0
-offset_bottom = 230.0
+layout_mode = 2
+offset_left = 35.5
+offset_right = 922.5
+offset_bottom = 887.0
 texture = SubResource("CompressedTexture2D_rvwxc")
 metadata/_edit_use_anchors_ = true
 
-[node name="RichTextLabel" type="RichTextLabel" parent="AspectRatioContainer/Background/Verificator"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Verificator"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -172,6 +159,7 @@ text = "
 "
 
 [node name="Composition" parent="." instance=ExtResource("3_pdncn")]
+visible = false
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

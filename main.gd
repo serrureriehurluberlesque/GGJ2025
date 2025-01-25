@@ -13,9 +13,9 @@ var animationplayer
 
 func _ready() -> void:
 	# Faut load ingredients_list
-	personnage = $AspectRatioContainer/Background/Personnage
-	prompt = $AspectRatioContainer/Background/Prompt
-	verificator = $AspectRatioContainer/Background/Verificator
+	personnage = $Personnage
+	prompt = $Prompt
+	verificator = $Verificator
 	composition = $Composition
 	
 	animationplayer = $AnimationPlayer
