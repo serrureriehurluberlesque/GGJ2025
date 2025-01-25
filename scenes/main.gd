@@ -64,12 +64,21 @@ func init_verificator(response):
 	print(response)
 	print(ingredients)
 	
+	var r = {}
+	r["Tea"] = "hanamaru" if response["tea"] == ingredients[0]["key"] else "batsu"
+	r["Syrup"] = "hanamaru" if response["syrup"] == ingredients[1]["key"] else "batsu"
+	r["Bubble"] = "hanamaru" if response["bubble"] == ingredients[2]["key"] else "batsu"
+	
 	personnage.modulate = Color(0.5, 0.5, 0.5)
 	background.modulate = Color(0.5, 0.5, 0.5)
 	frontground.modulate = Color(0.5, 0.5, 0.5)
 	
 	prompt.hide()
 	composition.hide()
+	
+	for n in ["Tea", "Syrup", "Bubble"]:
+		verificator.get_node(n).set_texture(load("res://assets/" + r[n] + ".png"))
+	
 	verificator.show()
 	
 	

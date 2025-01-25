@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c4ivvsabqt0xl"]
+[gd_scene load_steps=14 format=3 uid="uid://c4ivvsabqt0xl"]
 
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_5kc4h"]
 [ext_resource type="Texture2D" uid="uid://bbmx6433by8vj" path="res://assets/decor_1_back.png" id="2_l4ynh"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://c213xk8i85ujg" path="res://assets/bulle_texte.png" id="4_n303t"]
 [ext_resource type="Texture2D" uid="uid://txbd58q0vhv" path="res://assets/feedback.png" id="6_xlogm"]
 [ext_resource type="Texture2D" uid="uid://dt28dx32r4u8m" path="res://assets/verre_fini.png" id="7_k06tq"]
+[ext_resource type="Texture2D" uid="uid://dof2tb8konjji" path="res://icon.svg" id="8_8e3eg"]
 
 [sub_resource type="Animation" id="Animation_r7d8d"]
 length = 0.001
@@ -135,12 +136,12 @@ text = "
 [center]Bla bla je veux un thé rose avec un peu de café et aussi une petite coupelle de drogue[/center]
 "
 
-[node name="Verificator" type="TextureRect" parent="."]
+[node name="Verificator" type="Control" parent="."]
 layout_mode = 2
+anchors_preset = 0
 offset_left = 35.5
-offset_right = 922.5
+offset_right = 992.5
 offset_bottom = 887.0
-texture = ExtResource("6_xlogm")
 metadata/_edit_use_anchors_ = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Verificator"]
@@ -163,8 +164,40 @@ offset_right = 922.5
 offset_bottom = 887.0
 texture = ExtResource("7_k06tq")
 
+[node name="Table" type="TextureRect" parent="Verificator"]
+layout_mode = 2
+offset_left = -35.5
+offset_right = 922.5
+offset_bottom = 887.0
+texture = ExtResource("6_xlogm")
+
+[node name="Tea" type="TextureRect" parent="Verificator"]
+layout_mode = 2
+offset_left = 45.0
+offset_top = 220.0
+offset_right = 173.0
+offset_bottom = 348.0
+texture = ExtResource("8_8e3eg")
+
+[node name="Syrup" type="TextureRect" parent="Verificator"]
+layout_mode = 2
+offset_left = 222.0
+offset_top = 220.0
+offset_right = 350.0
+offset_bottom = 348.0
+texture = ExtResource("8_8e3eg")
+
+[node name="Bubble" type="TextureRect" parent="Verificator"]
+layout_mode = 2
+offset_left = 408.0
+offset_top = 220.0
+offset_right = 536.0
+offset_bottom = 348.0
+texture = ExtResource("8_8e3eg")
+
 [node name="Composition" parent="." instance=ExtResource("3_pdncn")]
 visible = false
+layout_mode = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
