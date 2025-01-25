@@ -2,11 +2,12 @@
 
 [ext_resource type="Script" path="res://scenes/tearoom.gd" id="1_bmmsd"]
 
-[node name="Tearoom" type="Control"]
-layout_mode = 3
+[node name="Tearoom" type="CenterContainer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = -958.0
+offset_bottom = -887.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_bmmsd")
