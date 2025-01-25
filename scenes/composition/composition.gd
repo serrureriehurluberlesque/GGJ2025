@@ -41,12 +41,18 @@ const scene_item = "res://scenes/composition/icon_item_container.tscn"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	init_toppings([POSSIBLE_TEAS, POSSIBLE_SYRUPS, POSSIBLE_BUBBLES])
+	pass
 	
 func init_toppings(ingredients_list: Array) -> void:
 	all_toppings = ingredients_list
 	populate_list()
 			
 func populate_list() -> void:
+	# Empty list and repopulate it
+	for n in %List.get_children():
+		%List.remove_child(n)
+		n.queue_free()
+		
 	for tea in all_toppings[step_id]:
 		var item = preload(scene_item).instantiate()
 		item.item_title = tea["title"]
@@ -61,20 +67,19 @@ func make_choice(key: String) -> void:
 	
 	if step_id == 0:
 		chosen_tea = key
-		$tea.visible = true
+		$composition_player.play("add_tea")
 	elif step_id == 1:
 		chosen_syrup = key
-		$sirop.visible = true
+		$composition_player.play("add_syrup")
 	else:
 		chosen_bubble = key
-		$bubbles.visible = true
-		
+		$composition_player.play("add_bubbles")
+
+
+func prepare_next() -> void:	
 	if chosen_tea and chosen_syrup and chosen_bubble:
 		validate.emit({"tea": chosen_tea, "syrup": chosen_syrup, "bubble": chosen_bubble})
 	else:
 		step_id += 1
-		# Empty list
-		for n in %List.get_children():
-			%List.remove_child(n)
-			n.queue_free()
+		
 		populate_list()
