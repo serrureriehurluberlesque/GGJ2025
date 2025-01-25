@@ -46,7 +46,16 @@ func _ready() -> void:
 	set_section_title()
 	
 func init_toppings(ingredients_list: Array) -> void:
+	# Reset
 	step_id = 0
+	chosen_tea = ""
+	chosen_syrup = ""
+	chosen_bubble = ""
+	$tea.visible = false
+	$sirop.visible = false
+	$bubbles.visible = false
+	
+	# Set toppings
 	all_toppings = ingredients_list
 	populate_list()
 			
