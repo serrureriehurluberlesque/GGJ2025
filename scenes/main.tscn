@@ -387,3 +387,4 @@ libraries = {
 }
 
 [node name="Jingle" type="AudioStreamPlayer" parent="."]
+volume_db = 6.0

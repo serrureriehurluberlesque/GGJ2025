@@ -22,6 +22,7 @@ func _ready() -> void:
 	move_child(tea, 0)
 	tea.connect("finished", next)
 	$Control/Start.connect("pressed", start)
+	$Control/SStart.connect("pressed", sstart)
 	$Control/Black.connect("pressed", star)
 	$Control/VideoStreamPlayer.connect("finished", star)
 	
@@ -108,3 +109,9 @@ func star():
 	$Control/Black.hide()
 	$Control/Black.queue_free()
 	$Control/VideoStreamPlayer.queue_free()
+
+func sstart():
+	$Control/SStart.hide()
+	$Control/VideoStreamPlayer.play()
+	$AudioStreamPlayer.play()
+	
