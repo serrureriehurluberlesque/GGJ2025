@@ -20,6 +20,7 @@ config/icon="res://assets/icon.png"
 
 window/size/viewport_width=1000
 window/size/viewport_height=910
+window/stretch/mode="canvas_items"
 window/handheld/orientation=1
 
 [rendering]
