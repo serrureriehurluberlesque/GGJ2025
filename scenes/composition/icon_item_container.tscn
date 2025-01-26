@@ -1,7 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://dmujsrnw1l4lj"]
+[gd_scene load_steps=8 format=3 uid="uid://dmujsrnw1l4lj"]
 
 [ext_resource type="Script" path="res://scenes/composition/icon_item_container.gd" id="1_bpcd2"]
-[ext_resource type="Texture2D" uid="uid://dpw1n3gqjcmt7" path="res://assets/bouton_craft_2_pressed.png" id="2_7prok"]
 [ext_resource type="Texture2D" uid="uid://cpnh2joxosm2d" path="res://assets/bouton_craft_2_hover.png" id="2_elltq"]
 [ext_resource type="Texture2D" uid="uid://bb68no8bax3ek" path="res://assets/bouton_craft_2_disabled.png" id="3_6b5lp"]
 [ext_resource type="Texture2D" uid="uid://egfp342sfpk8" path="res://assets/bouton_craft_2.png" id="3_k861c"]
@@ -20,7 +19,6 @@ grow_vertical = 2
 mouse_default_cursor_shape = 2
 action_mode = 0
 texture_normal = ExtResource("3_k861c")
-texture_pressed = ExtResource("2_7prok")
 texture_hover = ExtResource("2_elltq")
 texture_disabled = ExtResource("3_6b5lp")
 script = ExtResource("1_bpcd2")
@@ -31,7 +29,7 @@ layout_mode = 2
 anchor_right = 0.983713
 anchor_bottom = 0.918605
 theme_override_constants/margin_left = 5
-theme_override_constants/margin_top = 15
+theme_override_constants/margin_top = 12
 theme_override_constants/margin_right = 15
 theme_override_constants/margin_bottom = 15
 metadata/_edit_use_anchors_ = true
