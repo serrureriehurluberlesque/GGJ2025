@@ -290,12 +290,13 @@ layout_mode = 2
 
 [node name="PromptText" type="Label" parent="Prompt/TextMargin/ScrollContainer"]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(280, 50)
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("7_do78c")
 theme_override_font_sizes/font_size = 24
-text = "Bla bla je veux un thé rose avec un peu de café et aussi u"
+text = "B"
 autowrap_mode = 3
 
 [node name="Verificator" type="Control" parent="."]
