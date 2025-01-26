@@ -38,4 +38,5 @@ func _update_labels():
 		#self.tooltip_text = item_descr
 
 func _on_pressed() -> void:
+	$ChoiceSound.play()
 	chosen.emit(item_descr, key)
