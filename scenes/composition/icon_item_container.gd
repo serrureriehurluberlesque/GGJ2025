@@ -40,3 +40,12 @@ func _update_labels():
 func _on_pressed() -> void:
 	$ChoiceSound.play()
 	chosen.emit(item_descr, key)
+
+
+func _on_mouse_entered() -> void:
+	%Icon.modulate = Color("fff1ee")
+	$AnimationPlayer.play("icon_wiggle")
+
+
+func _on_mouse_exited() -> void:
+	%Icon.modulate = Color(1, 1, 1, 1)

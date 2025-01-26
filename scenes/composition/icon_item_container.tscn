@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dmujsrnw1l4lj"]
+[gd_scene load_steps=11 format=3 uid="uid://dmujsrnw1l4lj"]
 
 [ext_resource type="Script" path="res://scenes/composition/icon_item_container.gd" id="1_bpcd2"]
 [ext_resource type="Texture2D" uid="uid://cpnh2joxosm2d" path="res://assets/bouton_craft_2_hover.png" id="2_elltq"]
@@ -7,6 +7,42 @@
 [ext_resource type="Texture2D" uid="uid://b33j5kumhd0dc" path="res://assets/icon/tapioca.png" id="6_bbpde"]
 [ext_resource type="FontFile" uid="uid://c4i4numogvrbl" path="res://assets/CUTE FROG.ttf" id="7_u5474"]
 [ext_resource type="AudioStream" uid="uid://bweb1ryqmi0eo" path="res://assets/sounds/choice.wav" id="8_hi52g"]
+
+[sub_resource type="Animation" id="Animation_0uc86"]
+resource_name = "icon_wiggle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Margin/HBoxContainer/IconMargin/Control/Icon:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.0872665, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_4ah84"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Margin/HBoxContainer/IconMargin/Control/Icon:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q72tn"]
+_data = {
+"RESET": SubResource("Animation_4ah84"),
+"icon_wiggle": SubResource("Animation_0uc86")
+}
 
 [node name="IconItemContainer" type="TextureButton"]
 anchors_preset = -1
@@ -42,9 +78,16 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.5
 
-[node name="Icon" type="TextureRect" parent="Margin/HBoxContainer/IconMargin"]
-unique_name_in_owner = true
+[node name="Control" type="Control" parent="Margin/HBoxContainer/IconMargin"]
 layout_mode = 2
+
+[node name="Icon" type="TextureRect" parent="Margin/HBoxContainer/IconMargin/Control"]
+unique_name_in_owner = true
+modulate = Color(1, 0.946003, 0.932505, 1)
+layout_mode = 2
+offset_right = 73.0
+offset_bottom = 64.0
+pivot_offset = Vector2(37.2444, 31.711)
 texture = ExtResource("6_bbpde")
 
 [node name="TitleMargin" type="MarginContainer" parent="Margin/HBoxContainer"]
@@ -65,4 +108,11 @@ text = "Title"
 [node name="ChoiceSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_hi52g")
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_q72tn")
+}
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
 [connection signal="pressed" from="." to="." method="_on_pressed"]
