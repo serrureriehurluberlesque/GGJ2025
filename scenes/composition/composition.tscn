@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://6kw3g6bmikqu"]
+[gd_scene load_steps=27 format=3 uid="uid://6kw3g6bmikqu"]
 
 [ext_resource type="Script" path="res://scenes/composition/composition.gd" id="1_8q7nh"]
 [ext_resource type="Texture2D" uid="uid://wuogjxb7m8cq" path="res://assets/syrup_pump.png" id="2_m5yj8"]
@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://egfp342sfpk8" path="res://assets/bouton_craft_2.png" id="15_nnlah"]
 [ext_resource type="Texture2D" uid="uid://dpw1n3gqjcmt7" path="res://assets/bouton_craft_2_pressed.png" id="16_s61ik"]
 [ext_resource type="Texture2D" uid="uid://cpnh2joxosm2d" path="res://assets/bouton_craft_2_hover.png" id="17_q6jr2"]
+[ext_resource type="AudioStream" uid="uid://f0fk0adf78s8" path="res://assets/sounds/submit.wav" id="21_8fpmi"]
 
 [sub_resource type="Animation" id="Animation_neosr"]
 length = 0.001
@@ -560,6 +561,9 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("10_72v0u")
 theme_override_font_sizes/font_size = 42
 text = "Valider"
+
+[node name="SubmitSound" type="AudioStreamPlayer" parent="DescrBubble/Submit"]
+stream = ExtResource("21_8fpmi")
 
 [connection signal="pressed" from="DescrBubble/Submit" to="." method="_on_submit_pressed"]
 

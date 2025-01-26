@@ -130,6 +130,7 @@ func set_section_title() -> void:
 
 
 func _on_submit_pressed() -> void:
+	$DescrBubble/Submit/SubmitSound.play()
 	if selected_key:
 		make_choice(selected_key)
 		
