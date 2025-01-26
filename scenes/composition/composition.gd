@@ -53,6 +53,7 @@ func init_toppings(ingredients_list: Array) -> void:
 	$sirop.visible = false
 	$bubbles.visible = false
 	$SectionRect.texture = load("res://assets/bouton_craft_1_tea.png")
+	$DescrBubble/Submit.visible = false
 	
 	# Set toppings
 	all_toppings = ingredients_list
@@ -85,6 +86,8 @@ func show_description(description: String, key: String) -> void:
 			n.texture_normal = n.texture_disabled
 		else:
 			n.texture_normal = load("res://assets/bouton_craft_2.png")
+			
+	$DescrBubble/Submit.visible = true
 	
 func make_choice(key: String) -> void:
 	$DescrBubble.visible = false

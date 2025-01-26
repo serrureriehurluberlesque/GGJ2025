@@ -529,6 +529,7 @@ size_flags_vertical = 1
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("10_72v0u")
 theme_override_font_sizes/font_size = 24
+text = "Cliquez sur un élément pour avoir des infos supplémentaires"
 autowrap_mode = 3
 
 [node name="Submit" type="TextureButton" parent="DescrBubble"]
