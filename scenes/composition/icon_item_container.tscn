@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://dmujsrnw1l4lj"]
+[gd_scene load_steps=8 format=3 uid="uid://dmujsrnw1l4lj"]
 
 [ext_resource type="Script" path="res://scenes/composition/icon_item_container.gd" id="1_bpcd2"]
 [ext_resource type="Texture2D" uid="uid://dpw1n3gqjcmt7" path="res://assets/bouton_craft_2_pressed.png" id="2_7prok"]
 [ext_resource type="Texture2D" uid="uid://cpnh2joxosm2d" path="res://assets/bouton_craft_2_hover.png" id="2_elltq"]
 [ext_resource type="Texture2D" uid="uid://bb68no8bax3ek" path="res://assets/bouton_craft_2_disabled.png" id="3_6b5lp"]
 [ext_resource type="Texture2D" uid="uid://egfp342sfpk8" path="res://assets/bouton_craft_2.png" id="3_k861c"]
+[ext_resource type="Texture2D" uid="uid://b33j5kumhd0dc" path="res://assets/icon/tapioca.png" id="6_bbpde"]
 
 [sub_resource type="SystemFont" id="SystemFont_6nnth"]
 font_weight = 600
@@ -31,7 +32,7 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 2
 anchor_right = 0.983713
 anchor_bottom = 0.918605
-theme_override_constants/margin_left = 20
+theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 15
 theme_override_constants/margin_right = 15
 theme_override_constants/margin_bottom = 15
@@ -39,19 +40,6 @@ metadata/_edit_use_anchors_ = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Margin"]
 layout_mode = 2
-
-[node name="TitleMargin" type="MarginContainer" parent="Margin/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 1.5
-
-[node name="Title" type="Label" parent="Margin/HBoxContainer/TitleMargin"]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_vertical = 1
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = SubResource("SystemFont_6nnth")
-text = "Title"
 
 [node name="IconMargin" type="MarginContainer" parent="Margin/HBoxContainer"]
 layout_mode = 2
@@ -61,5 +49,20 @@ size_flags_stretch_ratio = 0.5
 [node name="Icon" type="TextureRect" parent="Margin/HBoxContainer/IconMargin"]
 unique_name_in_owner = true
 layout_mode = 2
+texture = ExtResource("6_bbpde")
+
+[node name="TitleMargin" type="MarginContainer" parent="Margin/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.5
+theme_override_constants/margin_bottom = 10
+
+[node name="Title" type="Label" parent="Margin/HBoxContainer/TitleMargin"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_6nnth")
+text = "Title"
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]

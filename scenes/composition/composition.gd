@@ -64,11 +64,12 @@ func populate_list() -> void:
 		%List.remove_child(n)
 		n.queue_free()
 		
-	for tea in all_toppings[step_id]:
+	for elem in all_toppings[step_id]:
 		var item = preload(scene_item).instantiate()
-		item.item_title = tea["title"]
-		item.item_descr = tea["descr"]
-		item.key = tea["key"]
+		item.item_title = elem["title"]
+		item.item_descr = elem["descr"]
+		item.key = elem["key"]
+		item.item_icon = load("res://assets/icon/" + elem["key"] + ".png")
 		item.connect("chosen", show_description)
 		%List.add_child(item)
 		
