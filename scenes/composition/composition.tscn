@@ -516,9 +516,9 @@ offset_right = -13.0
 offset_bottom = -86.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 15
+theme_override_constants/margin_left = 10
 theme_override_constants/margin_top = 15
-theme_override_constants/margin_right = 15
+theme_override_constants/margin_right = 10
 
 [node name="Description" type="Label" parent="DescrBubble/LabelMargin"]
 unique_name_in_owner = true
@@ -527,7 +527,7 @@ layout_mode = 2
 size_flags_vertical = 1
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("10_72v0u")
-theme_override_font_sizes/font_size = 28
+theme_override_font_sizes/font_size = 24
 autowrap_mode = 3
 
 [node name="Submit" type="TextureButton" parent="DescrBubble"]

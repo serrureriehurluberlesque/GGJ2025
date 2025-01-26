@@ -240,8 +240,8 @@ offset_right = 851.0
 offset_bottom = 378.0
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 15
-theme_override_constants/margin_right = 15
-theme_override_constants/margin_bottom = 15
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Prompt/TextMargin"]
 layout_mode = 2
