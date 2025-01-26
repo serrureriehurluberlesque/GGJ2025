@@ -1,7 +1,7 @@
 [
     {"prompt_text": "Bonjour ! J'aimerais du thé noir, avec un sirop de miel et des perles de tapioca s'il vous plaît.", "duration_prompt": 3, "toppings":["black", "miel", "tapioca"], "dificulty": 1},
     {"prompt_text": "Salut ! Alors euh, volontiers un thé vert, avec du sirop de citron et des perles de cerise.", "duration_prompt": 3, "toppings":["green", "citron", "cerise"], "dificulty": 1},
-    {"prompt_text": "Hello ! C'est possible d'avoir du thé vert, avec sirop de myrtille et perles de litchi ?", "duration_prompt": 3, "toppings":["green", "myrtille", "tapioca"], "dificulty": 1},
+    {"prompt_text": "Hello ! C'est possible d'avoir du thé vert, avec sirop de myrtille et perles de litchi ?", "duration_prompt": 3, "toppings":["green", "myrtille", "litchi"], "dificulty": 1},
     {"prompt_text": "Oh, vous avez du maté ? Génial ! J'aime bien les boissons originales. Surprenez-moi !", "duration_prompt": 3, "toppings":["mate", "hibiscus", "mochi"], "dificulty": 2},
     {"prompt_text": "Bonjour ! C'est mon premier bubble tea. J'aimerais bien découvrir la version la plus classique. Oh, et j'adore le citron !", "duration_prompt": 3, "toppings":["black", "citron", "tapioca"], "dificulty": 2},
     {"prompt_text": "Bonjour... je voudrais... euh... du thé vert... et puis... du sirop... de citron... non, kiwi, plutôt... réflexion faite, plutôt fraise... hein, ça n'existe pas ? Myrtille alors... attendez... non, framboise... et puis, pour les billes - enfin, je veux dire, les perles - disons, pastèque... euh non, litchi... enfin, mochi. Bref, vous m'avez compris.", "duration_prompt": 5, "toppings":["green", "framboise", "mochi"], "dificulty": 2},
