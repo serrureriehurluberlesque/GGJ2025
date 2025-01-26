@@ -4,9 +4,9 @@
     {"prompt_text": "Hello ! C'est possible d'avoir du thé vert, avec sirop de myrtille et perles de litchi ?", "duration_prompt": 3, "toppings":["green", "myrtille", "litchi"], "dificulty": 1},
     {"prompt_text": "Oh, vous avez du maté ? Génial ! J'aime bien les boissons originales. Surprenez-moi !", "duration_prompt": 3, "toppings":["mate", "hibiscus", "mochi"], "dificulty": 2},
     {"prompt_text": "Bonjour ! C'est mon premier bubble tea. J'aimerais bien découvrir la version la plus classique. Oh, et j'adore le citron !", "duration_prompt": 3, "toppings":["black", "citron", "tapioca"], "dificulty": 2},
-    {"prompt_text": "Bonjour... je voudrais... euh... du thé vert... et puis... du sirop... de citron... non, kiwi, plutôt... réflexion faite, plutôt fraise... hein, ça n'existe pas ? Myrtille alors... attendez... non, framboise... et puis, pour les billes - enfin, je veux dire, les perles - disons, pastèque... euh non, litchi... enfin, mochi. Bref, vous m'avez compris.", "duration_prompt": 8, "toppings":["green", "framboise", "mochi"], "dificulty": 2},
+    {"prompt_text": "Bonjour... je voudrais... euh... du thé vert... et puis... du sirop... de citron... non, kiwi, plutôt... réflexion faite, plutôt fraise... hein, ça n'existe pas ? Myrtille alors... attendez... non, framboise... et puis, pour les billes - enfin, je veux dire, les perles - disons, pastèque... euh non, litchi... pardon, mochi. Bref, vous m'avez compris.", "duration_prompt": 8, "toppings":["green", "framboise", "mochi"], "dificulty": 2},
     {"prompt_text": "Le vert c'est super !", "duration_prompt": 1, "toppings":["green", "kiwi", "pasteque"], "dificulty": 3},
     {"prompt_text": "Hmmm. Hmmmmmm. Qu'est-ce que vous conseilleriez à quelqu'un de léthargique, et qui a probablement des carences ?", "duration_prompt": 3, "toppings":["mate", "kiwi", "ananas"], "dificulty": 3},
-    {"prompt_text": "J'aimerais une boissons qui me fasse penser à un pays lointain.", "duration_prompt": 3, "toppings":["mate", "hibiscus", "litchi"], "dificulty": 3},
+    {"prompt_text": "J'aimerais une boisson qui me fasse penser à des pays lointains.", "duration_prompt": 3, "toppings":["mate", "hibiscus", "litchi"], "dificulty": 3},
 
 ]

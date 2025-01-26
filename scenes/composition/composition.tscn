@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://6kw3g6bmikqu"]
+[gd_scene load_steps=26 format=3 uid="uid://6kw3g6bmikqu"]
 
 [ext_resource type="Script" path="res://scenes/composition/composition.gd" id="1_8q7nh"]
 [ext_resource type="Texture2D" uid="uid://wuogjxb7m8cq" path="res://assets/syrup_pump.png" id="2_m5yj8"]
@@ -11,6 +11,7 @@
 [ext_resource type="AudioStream" uid="uid://dpskva8lyvi7d" path="res://assets/sounds/tea.wav" id="8_kc1n8"]
 [ext_resource type="AudioStream" uid="uid://d2dcf5iivfv32" path="res://assets/sounds/syrup2.wav" id="9_3316o"]
 [ext_resource type="Texture2D" uid="uid://0kmqyksb61d6" path="res://assets/bouton_craft_1_tea.png" id="9_scmgn"]
+[ext_resource type="FontFile" uid="uid://c4i4numogvrbl" path="res://assets/CUTE FROG.ttf" id="10_72v0u"]
 [ext_resource type="AudioStream" uid="uid://bvsbbqnilyish" path="res://assets/sounds/tapioca.wav" id="10_ik467"]
 [ext_resource type="PackedScene" uid="uid://6vhvfllng0a" path="res://scenes/rainning_tapioca.tscn" id="11_7nw1a"]
 [ext_resource type="Texture2D" uid="uid://ci481pvs176ul" path="res://assets/theiere.png" id="12_dvh0g"]
@@ -372,8 +373,8 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -958.0
-offset_bottom = -887.0
+offset_right = -1000.0
+offset_bottom = -910.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_8q7nh")
@@ -439,7 +440,7 @@ anchor_right = 1.0
 anchor_bottom = 0.912
 offset_bottom = 0.0239868
 theme_override_constants/margin_left = 30
-theme_override_constants/margin_top = 20
+theme_override_constants/margin_top = 30
 theme_override_constants/margin_right = 100
 theme_override_constants/margin_bottom = 10
 
@@ -447,6 +448,9 @@ theme_override_constants/margin_bottom = 10
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_72v0u")
+theme_override_font_sizes/font_size = 60
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -494,7 +498,6 @@ offset_bottom = 653.0
 texture = ExtResource("12_dvh0g")
 
 [node name="DescrBubble" type="TextureRect" parent="."]
-visible = false
 layout_mode = 0
 offset_left = 510.0
 offset_top = 49.0
@@ -513,15 +516,18 @@ offset_right = -13.0
 offset_bottom = -86.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 30
-theme_override_constants/margin_top = 30
-theme_override_constants/margin_right = 20
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
 
 [node name="Description" type="Label" parent="DescrBubble/LabelMargin"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(50, 60)
 layout_mode = 2
 size_flags_vertical = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_72v0u")
+theme_override_font_sizes/font_size = 28
 autowrap_mode = 3
 
 [node name="Submit" type="TextureButton" parent="DescrBubble"]
@@ -550,6 +556,9 @@ offset_right = 27.5
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_72v0u")
+theme_override_font_sizes/font_size = 42
 text = "Valider"
 
 [connection signal="pressed" from="DescrBubble/Submit" to="." method="_on_submit_pressed"]
