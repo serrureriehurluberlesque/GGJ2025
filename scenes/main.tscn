@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://c4ivvsabqt0xl"]
+[gd_scene load_steps=24 format=3 uid="uid://c4ivvsabqt0xl"]
 
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_5kc4h"]
 [ext_resource type="Texture2D" uid="uid://bbmx6433by8vj" path="res://assets/decor_1_back.png" id="2_l4ynh"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://c213xk8i85ujg" path="res://assets/bulle_texte.png" id="4_n303t"]
 [ext_resource type="Texture2D" uid="uid://bxgyt8kdi7j2p" path="res://assets/verre_fond.png" id="6_xeclu"]
 [ext_resource type="Texture2D" uid="uid://txbd58q0vhv" path="res://assets/feedback.png" id="6_xlogm"]
+[ext_resource type="FontFile" uid="uid://c4i4numogvrbl" path="res://assets/CUTE FROG.ttf" id="7_do78c"]
 [ext_resource type="Texture2D" uid="uid://dt28dx32r4u8m" path="res://assets/verre_fini.png" id="7_k06tq"]
 [ext_resource type="Texture2D" uid="uid://durr5bk2d1bp7" path="res://assets/toppings/black.png" id="8_0rrxk"]
 [ext_resource type="Texture2D" uid="uid://dof2tb8konjji" path="res://icon.svg" id="8_8e3eg"]
@@ -240,12 +241,21 @@ offset_bottom = 378.0
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 15
 theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
 
-[node name="PromptText" type="RichTextLabel" parent="Prompt/TextMargin"]
-unique_name_in_owner = true
+[node name="ScrollContainer" type="ScrollContainer" parent="Prompt/TextMargin"]
 layout_mode = 2
-bbcode_enabled = true
+
+[node name="PromptText" type="Label" parent="Prompt/TextMargin/ScrollContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 200)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("7_do78c")
+theme_override_font_sizes/font_size = 24
 text = "Bla bla je veux un thé rose avec un peu de café et aussi une petite coupelle de drogue Bla bla je veux un thé rose avec un peu de café et aussi une petite coupelle de drogue Bla bla je veux un thé rose avec un peu de café et aussi une petite coupelle de drogue Bla bla jde drogue Bla bla jdrogue Bla bl"
+autowrap_mode = 3
 
 [node name="Verificator" type="Control" parent="."]
 visible = false
