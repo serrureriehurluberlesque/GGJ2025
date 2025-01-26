@@ -8,21 +8,6 @@
 [ext_resource type="FontFile" uid="uid://c4i4numogvrbl" path="res://assets/CUTE FROG.ttf" id="7_u5474"]
 [ext_resource type="AudioStream" uid="uid://bweb1ryqmi0eo" path="res://assets/sounds/choice.wav" id="8_hi52g"]
 
-[sub_resource type="Animation" id="Animation_0uc86"]
-resource_name = "icon_wiggle"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Margin/HBoxContainer/IconMargin/Control/Icon:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [0.0, -0.0872665, 0.0]
-}
-
 [sub_resource type="Animation" id="Animation_4ah84"]
 length = 0.001
 tracks/0/type = "value"
@@ -36,6 +21,21 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_0uc86"]
+resource_name = "icon_wiggle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Margin/HBoxContainer/IconMargin/Control/Icon:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.0872665, 0.0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_q72tn"]
@@ -83,7 +83,6 @@ layout_mode = 2
 
 [node name="Icon" type="TextureRect" parent="Margin/HBoxContainer/IconMargin/Control"]
 unique_name_in_owner = true
-modulate = Color(1, 0.946003, 0.932505, 1)
 layout_mode = 2
 offset_right = 73.0
 offset_bottom = 64.0

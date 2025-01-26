@@ -84,8 +84,10 @@ func show_description(description: String, key: String) -> void:
 	for n in %List.get_children():
 		if n.key != key:
 			n.texture_normal = n.texture_disabled
+			n.get_node("%Icon").modulate = Color("7a797f")
 		else:
 			n.texture_normal = load("res://assets/bouton_craft_2.png")
+			n.get_node("%Icon").modulate = Color("ffffff")
 			
 	$DescrBubble/Submit.visible = true
 	
@@ -110,6 +112,7 @@ func make_choice(key: String) -> void:
 	for n in %List.get_children():
 		if n.key != key:
 			n.disabled = true
+			n.get_node("%Icon").modulate = Color("7a797f")
 		else:
 			n.texture_normal = n.texture_hover
 
