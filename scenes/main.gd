@@ -103,6 +103,8 @@ func init_verificator(response):
 		verificator.get_node(n).set_texture(load("res://assets/" + r[n] + ".png"))
 		verificator.get_node(n).modulate = Color(1, 1, 1, 0)
 		verificator.get_node("Verre_" + n).set_texture(load("res://assets/toppings/" + response[n] + ".png"))
+		
+		verificator.get_node("Sound_" + n).set_stream(load("res://assets/sounds/ding_" + r[n] + ".wav"))
 	
 	if hanamaru:
 		#redo_btn.set_disabled(true)
