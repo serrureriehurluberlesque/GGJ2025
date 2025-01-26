@@ -89,12 +89,15 @@ func make_choice(key: String) -> void:
 	
 	if step_id == 0:
 		chosen_tea = key
+		$tea.texture = load("res://assets/toppings/" + key + ".png")
 		$composition_player.play("add_tea")
 	elif step_id == 1:
 		chosen_syrup = key
+		$sirop.texture = load("res://assets/toppings/" + key + ".png")
 		$composition_player.play("add_syrup")
 	else:
 		chosen_bubble = key
+		$bubbles.texture = load("res://assets/toppings/" + key + ".png")
 		$composition_player.play("add_bubbles")
 	
 	# Disable choices

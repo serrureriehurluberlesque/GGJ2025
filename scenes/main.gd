@@ -8,6 +8,7 @@ var ingredients = {}
 
 var personnage
 var background
+var background2
 var frontground
 var prompt
 var composition
@@ -21,6 +22,7 @@ func _ready() -> void:
 	personnage = $Personnage
 	background = $Background
 	frontground = $Frontground
+	background2 = $Background2
 	prompt = $Prompt
 	verificator = $Verificator
 	composition = $Composition
@@ -43,6 +45,7 @@ func reset_all():
 	personnage.modulate = Color(1, 1, 1)
 	background.modulate = Color(1, 1, 1)
 	frontground.modulate = Color(1, 1, 1)
+	background2.modulate = Color(1, 1, 1)
 	redo_or_next_btn.modulate = Color(1, 1, 1)
 	
 	prompt_text = ""
@@ -91,6 +94,7 @@ func init_verificator(response):
 	personnage.modulate = Color(0.5, 0.5, 0.5)
 	background.modulate = Color(0.5, 0.5, 0.5)
 	frontground.modulate = Color(0.5, 0.5, 0.5)
+	background2.modulate = Color(0.5, 0.5, 0.5)
 	
 	prompt.hide()
 	composition.hide()
