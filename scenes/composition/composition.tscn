@@ -14,7 +14,7 @@
 [ext_resource type="AudioStream" uid="uid://bvsbbqnilyish" path="res://assets/sounds/tapioca.wav" id="10_ik467"]
 [ext_resource type="PackedScene" uid="uid://6vhvfllng0a" path="res://scenes/rainning_tapioca.tscn" id="11_7nw1a"]
 [ext_resource type="Texture2D" uid="uid://ci481pvs176ul" path="res://assets/theiere.png" id="12_dvh0g"]
-[ext_resource type="Texture2D" path="res://assets/bubble.png" id="14_6bjjf"]
+[ext_resource type="Texture2D" uid="uid://berslddf3i2bb" path="res://assets/bubble.png" id="14_6bjjf"]
 [ext_resource type="Texture2D" uid="uid://pajx283ag8qp" path="res://assets/bulle_texte_cropped.png" id="14_psxxp"]
 [ext_resource type="Texture2D" uid="uid://egfp342sfpk8" path="res://assets/bouton_craft_2.png" id="15_nnlah"]
 [ext_resource type="Texture2D" uid="uid://dpw1n3gqjcmt7" path="res://assets/bouton_craft_2_pressed.png" id="16_s61ik"]
@@ -474,7 +474,7 @@ stream = ExtResource("10_ik467")
 position = Vector2(680, -397)
 
 [node name="GPUParticles2D" parent="RainningTapioca" index="0"]
-position = Vector2(-16, 813)
+position = Vector2(2, 854)
 amount = 10
 texture = ExtResource("14_6bjjf")
 
