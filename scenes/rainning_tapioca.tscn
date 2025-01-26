@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://6vhvfllng0a"]
 
-[ext_resource type="Texture2D" uid="uid://s61somd0vhvx" path="res://assets/bubble.png" id="1_tgk7d"]
+[ext_resource type="Texture2D" uid="uid://dvqj5t7fhmktr" path="res://assets/bubble/ananas.png" id="1_0syp6"]
 
 [sub_resource type="Gradient" id="Gradient_617lt"]
 offsets = PackedFloat32Array(0, 0.272059, 0.757353, 1)
@@ -11,6 +11,8 @@ gradient = SubResource("Gradient_617lt")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_dpnp1"]
 particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(64, 5, 1)
 angle_min = -15.0
 angle_max = 15.0
 gravity = Vector3(0, 98, 0)
@@ -21,13 +23,15 @@ scale_max = 1.1
 color_ramp = SubResource("GradientTexture1D_td1x4")
 
 [node name="RainningTapioca" type="Node2D"]
+z_index = 2
+position = Vector2(677, 402)
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
-position = Vector2(0, -400)
 emitting = false
-amount = 35
+amount = 12
 process_material = SubResource("ParticleProcessMaterial_dpnp1")
-texture = ExtResource("1_tgk7d")
+texture = ExtResource("1_0syp6")
 lifetime = 1.5
 one_shot = true
+speed_scale = 3.0
 fixed_fps = 60

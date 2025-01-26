@@ -479,13 +479,6 @@ volume_db = 7.0
 stream = ExtResource("10_ik467")
 
 [node name="RainningTapioca" parent="." instance=ExtResource("11_7nw1a")]
-z_index = 2
-position = Vector2(680, -397)
-
-[node name="GPUParticles2D" parent="RainningTapioca" index="0"]
-position = Vector2(22, 519)
-amount = 10
-speed_scale = 3.0
 
 [node name="theiere" type="TextureRect" parent="."]
 modulate = Color(1, 1, 1, 0)

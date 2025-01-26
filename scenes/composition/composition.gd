@@ -98,6 +98,7 @@ func make_choice(key: String) -> void:
 	else:
 		chosen_bubble = key
 		$bubbles.texture = load("res://assets/toppings/" + key + ".png")
+		$RainningTapioca/GPUParticles2D.texture = load("res://assets/bubble/" + key + ".png")
 		$composition_player.play("add_bubbles")
 	
 	# Disable choices
