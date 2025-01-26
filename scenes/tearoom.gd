@@ -54,6 +54,7 @@ func load_prompt():
 				print("missing toppings for prompt")
 				print(pr)
 	prompts.shuffle()
+	prompts.shuffle()
 
 func new_tapioc():	
 	p = choose_prompt()
