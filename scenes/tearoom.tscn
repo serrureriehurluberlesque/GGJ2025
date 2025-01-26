@@ -21,6 +21,7 @@ script = ExtResource("1_bmmsd")
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
+mouse_filter = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Start" type="TextureButton" parent="Control"]
@@ -30,6 +31,7 @@ offset_right = 1000.0
 offset_bottom = 910.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
+button_mask = 7
 texture_normal = ExtResource("2_ts6t2")
 
 [node name="End" type="TextureRect" parent="Control"]
@@ -69,6 +71,7 @@ offset_right = 1034.0
 offset_bottom = 947.0
 grow_horizontal = 2
 grow_vertical = 2
+button_mask = 7
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Control"]
 z_index = 3
@@ -85,6 +88,7 @@ offset_right = 1000.0
 offset_bottom = 910.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
+button_mask = 7
 texture_normal = ExtResource("5_jwj0k")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
