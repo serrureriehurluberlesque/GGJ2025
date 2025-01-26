@@ -23,6 +23,7 @@ func _ready() -> void:
 	tea.connect("finished", next)
 	$Control/Start.connect("pressed", start)
 	$Control/SStart.connect("pressed", sstart)
+	$Control/End.connect("pressed", end)
 	$Control/Black.connect("pressed", star)
 	$Control/VideoStreamPlayer.connect("finished", star)
 	
@@ -111,4 +112,6 @@ func sstart():
 	$Control/SStart.hide()
 	$Control/VideoStreamPlayer.play()
 	$AudioStreamPlayer.play()
-	
+
+func end():
+	$Control/End2.show()

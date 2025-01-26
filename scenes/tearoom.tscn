@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://c4yaqpwnpwag7"]
+[gd_scene load_steps=8 format=3 uid="uid://c4yaqpwnpwag7"]
 
 [ext_resource type="Script" path="res://scenes/tearoom.gd" id="1_bmmsd"]
 [ext_resource type="Texture2D" uid="uid://cptur4mkvgwdr" path="res://assets/start.png" id="2_ts6t2"]
+[ext_resource type="Texture2D" uid="uid://c51f0adxpmr81" path="res://assets/congrats.png" id="3_78fv6"]
 [ext_resource type="Texture2D" uid="uid://bk6n4d7tpb5b1" path="res://assets/end.png" id="3_p4kau"]
 [ext_resource type="AudioStream" uid="uid://brgcah0rs6jxy" path="res://assets/sounds/music.ogg" id="4_n0fo8"]
 [ext_resource type="VideoStream" path="res://assets/introf.ogv" id="4_tre3t"]
@@ -34,7 +35,18 @@ size_flags_vertical = 4
 button_mask = 7
 texture_normal = ExtResource("2_ts6t2")
 
-[node name="End" type="TextureRect" parent="Control"]
+[node name="End" type="TextureButton" parent="Control"]
+visible = false
+z_index = 1
+layout_mode = 2
+offset_right = 1000.0
+offset_bottom = 910.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+button_mask = 7
+texture_normal = ExtResource("3_78fv6")
+
+[node name="End2" type="TextureRect" parent="Control"]
 visible = false
 z_index = 1
 layout_mode = 2
