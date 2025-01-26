@@ -178,6 +178,48 @@ tracks/4/keys = {
 "method": &"play"
 }]
 }
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Verificator/Sound_tea")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Verificator/Sound_syrup")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Verificator/Sound_bubble")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(1.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_culu3"]
 _data = {
@@ -366,6 +408,12 @@ theme_override_fonts/font = ExtResource("7_do78c")
 theme_override_font_sizes/font_size = 28
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Sound_tea" type="AudioStreamPlayer" parent="Verificator"]
+
+[node name="Sound_syrup" type="AudioStreamPlayer" parent="Verificator"]
+
+[node name="Sound_bubble" type="AudioStreamPlayer" parent="Verificator"]
 
 [node name="Composition" parent="." instance=ExtResource("3_pdncn")]
 visible = false
