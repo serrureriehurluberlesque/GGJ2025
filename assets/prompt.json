@@ -13,4 +13,5 @@
     {"prompt_text": "J'aimerais une boisson qui me fasse penser à des pays lointains.", "duration_prompt": 5, "toppings":["mate", "hibiscus", "litchi"], "dificulty": 3},
     {"prompt_text": "Hello, c'est possible d'avoir un bubble tea de couleur rouge sang ? (C'est un peu embarrassant mais on fait un jeu de rôle avec mes amis, et je dois faire semblant d'être un vampire.)", "duration_prompt": 5, "toppings":["black", "framboise", "cerise"], "dificulty": 3},
     {"prompt_text": "Buongiorno. Vorrei un tè verde con sciroppo di kiwi e perle di ananas, per favore.", "duration_prompt": 5, "toppings":["green", "kiwi", "ananas"], "dificulty": 2},
+    {"prompt_text": "Guten Morgen. Ich hätte gerne einen Mate, mit Hibiskussirup und Litschiperlen, bitte.", "duration_prompt": 5, "toppings":["mate", "hibiscus", "litchi"], "dificulty": 2},
 ]
