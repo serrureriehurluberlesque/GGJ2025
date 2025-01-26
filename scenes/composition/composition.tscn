@@ -20,7 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://egfp342sfpk8" path="res://assets/bouton_craft_2.png" id="15_nnlah"]
 [ext_resource type="Texture2D" uid="uid://dpw1n3gqjcmt7" path="res://assets/bouton_craft_2_pressed.png" id="16_s61ik"]
 [ext_resource type="Texture2D" uid="uid://cpnh2joxosm2d" path="res://assets/bouton_craft_2_hover.png" id="17_q6jr2"]
-[ext_resource type="AudioStream" uid="uid://f0fk0adf78s8" path="res://assets/sounds/submit.wav" id="21_8fpmi"]
+[ext_resource type="AudioStream" uid="uid://dxvbbvnbtj7m0" path="res://assets/sounds/submit.wav" id="21_8fpmi"]
 
 [sub_resource type="Animation" id="Animation_neosr"]
 length = 0.001
