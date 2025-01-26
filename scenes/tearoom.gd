@@ -22,6 +22,8 @@ func _ready() -> void:
 	move_child(tea, 0)
 	tea.connect("finished", next)
 	$Control/Start.connect("pressed", start)
+	$Control/Black.connect("pressed", star)
+	$Control/VideoStreamPlayer.connect("finished", star)
 	
 	c = randi() % 3 + 1
 	
@@ -98,3 +100,9 @@ func gg():
 func start():
 	$Control/Start.hide()
 	new_tapioc()
+
+func star():
+	$Control/VideoStreamPlayer.hide()
+	$Control/Black.hide()
+	$Control/Black.queue_free()
+	$Control/VideoStreamPlayer.queue_free()

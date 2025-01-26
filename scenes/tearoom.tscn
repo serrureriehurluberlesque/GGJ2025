@@ -56,17 +56,18 @@ offset_right = 1500.0
 offset_bottom = 1500.0
 color = Color(0, 0, 0, 1)
 
-[node name="black" type="ColorRect" parent="Control"]
-z_index = 2
+[node name="Black" type="ColorPickerButton" parent="Control"]
+z_index = 1
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 1000.0
-offset_bottom = 910.0
+offset_left = -11.0
+offset_top = -12.0
+offset_right = 1034.0
+offset_bottom = 947.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 1)
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Control"]
 z_index = 3
@@ -75,7 +76,6 @@ offset_left = -140.0
 offset_top = 95.0
 offset_right = 1140.0
 offset_bottom = 1375.0
-mouse_filter = 2
 stream = ExtResource("4_tre3t")
 autoplay = true
 
