@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://c4yaqpwnpwag7"]
+[gd_scene load_steps=6 format=3 uid="uid://c4yaqpwnpwag7"]
 
 [ext_resource type="Script" path="res://scenes/tearoom.gd" id="1_bmmsd"]
 [ext_resource type="Texture2D" uid="uid://cptur4mkvgwdr" path="res://assets/start.png" id="2_ts6t2"]
 [ext_resource type="Texture2D" uid="uid://bk6n4d7tpb5b1" path="res://assets/end.png" id="3_p4kau"]
 [ext_resource type="AudioStream" uid="uid://brgcah0rs6jxy" path="res://assets/sounds/music.ogg" id="4_n0fo8"]
+[ext_resource type="VideoStream" path="res://assets/introf.ogv" id="4_tre3t"]
 
 [node name="Tearoom" type="CenterContainer"]
 anchors_preset = 15
@@ -24,11 +25,10 @@ metadata/_edit_use_anchors_ = true
 [node name="Start" type="TextureButton" parent="Control"]
 z_index = 1
 layout_mode = 2
-offset_right = 958.0
-offset_bottom = 884.0
+offset_right = 1000.0
+offset_bottom = 910.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
-button_mask = 7
 texture_normal = ExtResource("2_ts6t2")
 
 [node name="End" type="TextureRect" parent="Control"]
@@ -40,6 +40,7 @@ offset_bottom = 910.0
 texture = ExtResource("3_p4kau")
 
 [node name="ColorRect" type="ColorRect" parent="Control"]
+visible = false
 layout_mode = 0
 offset_left = -500.0
 offset_top = -500.0
@@ -47,12 +48,36 @@ offset_bottom = 1500.0
 color = Color(0, 0, 0, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="Control"]
+visible = false
 layout_mode = 0
 offset_left = 1000.0
 offset_top = -500.0
 offset_right = 1500.0
 offset_bottom = 1500.0
 color = Color(0, 0, 0, 1)
+
+[node name="black" type="ColorRect" parent="Control"]
+z_index = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1000.0
+offset_bottom = 910.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Control"]
+z_index = 3
+layout_mode = 0
+offset_left = -140.0
+offset_top = 95.0
+offset_right = 1140.0
+offset_bottom = 1375.0
+mouse_filter = 2
+stream = ExtResource("4_tre3t")
+autoplay = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_n0fo8")
