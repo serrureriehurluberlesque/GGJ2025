@@ -26,7 +26,7 @@ func _ready() -> void:
 	$Control/Black.connect("pressed", star)
 	$Control/VideoStreamPlayer.connect("finished", star)
 	
-	c = randi() % 3 + 1
+	c = randi() % 5
 	
 	
 
@@ -63,10 +63,7 @@ func new_tapioc():
 	tea.init_n_start(toppings_list, p["toppings"], p["prompt_text"], p["duration_prompt"], "client_" + str(c), true)
 
 func next_client():
-	var tmp = (c + 1) % 3
-	if tmp == 0:
-		tmp = 3
-	return tmp
+	return (c + 1) % 5
 
 func redo_tapioc():
 	tea.init_n_start(toppings_list, p["toppings"], p["prompt_text"], p["duration_prompt"], "client_" + str(c), false)
