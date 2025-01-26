@@ -171,7 +171,7 @@ tracks/4/path = NodePath("Jingle")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(1.25),
+"times": PackedFloat32Array(2.06667),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [0.0],
@@ -290,13 +290,12 @@ layout_mode = 2
 
 [node name="PromptText" type="Label" parent="Prompt/TextMargin/ScrollContainer"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(100, 200)
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("7_do78c")
 theme_override_font_sizes/font_size = 24
-text = "Bla bla je veux un thé rose avec un peu de café et aussi une petite coupelle de drogue Bla bla je veux un thé rose avec un peu de café et aussi une petite coupelle de drogue Bla bla je veux un thé rose avec un peu de café et aussi une petite coupelle de drogue Bla bla jde drogue Bla bla jdrogue Bla bl"
+text = "Bla bla je veux un thé rose avec un peu de café et aussi u"
 autowrap_mode = 3
 
 [node name="Verificator" type="Control" parent="."]
@@ -432,4 +431,4 @@ libraries = {
 }
 
 [node name="Jingle" type="AudioStreamPlayer" parent="."]
-volume_db = 6.0
+volume_db = 10.0
