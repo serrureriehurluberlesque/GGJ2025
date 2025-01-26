@@ -77,9 +77,11 @@ layout_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.5
+mouse_filter = 2
 
 [node name="Control" type="Control" parent="Margin/HBoxContainer/IconMargin"]
 layout_mode = 2
+mouse_filter = 2
 
 [node name="Icon" type="TextureRect" parent="Margin/HBoxContainer/IconMargin/Control"]
 unique_name_in_owner = true
@@ -87,6 +89,7 @@ layout_mode = 2
 offset_right = 73.0
 offset_bottom = 64.0
 pivot_offset = Vector2(37.2444, 31.711)
+mouse_filter = 2
 texture = ExtResource("6_bbpde")
 
 [node name="TitleMargin" type="MarginContainer" parent="Margin/HBoxContainer"]

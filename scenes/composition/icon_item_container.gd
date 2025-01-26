@@ -22,6 +22,8 @@ signal chosen
 	#set(value):
 		#item_descr = value
 		#_update_labels()
+		
+var prev_modulate: Color
 
 
 # Called when the node enters the scene tree for the first time.
@@ -43,9 +45,10 @@ func _on_pressed() -> void:
 
 
 func _on_mouse_entered() -> void:
+	prev_modulate = %Icon.modulate
 	%Icon.modulate = Color("fff1ee")
 	$AnimationPlayer.play("icon_wiggle")
 
 
 func _on_mouse_exited() -> void:
-	%Icon.modulate = Color(1, 1, 1, 1)
+	%Icon.modulate = prev_modulate
