@@ -11,6 +11,9 @@ var i
 var difficulty_level = 1
 var is_endless = false
 
+var t = 0
+var endend = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	load_toppings()
@@ -25,13 +28,20 @@ func _ready() -> void:
 	$Control/Start.connect("pressed", start)
 	$Control/SStart.connect("pressed", sstart)
 	$Control/End.connect("pressed", end)
-	$Control/End2.connect("pressed", endless)
+	$Control/End2.connect("pressed", endles)
+	$Control/End25.connect("pressed", endless)
 	$Control/Black.connect("pressed", star)
 	$Control/VideoStreamPlayer.connect("finished", star)
 	
 	c = randi() % 5
-	
-	
+
+func _process(delta):
+	if endend:
+		t += delta
+		if t >= 0.2:
+			$Control/GPUParticles2D/AudioStreamPlayer.play(0.65)
+			t -= 0.2
+			
 
 func load_toppings():
 	var file = "res://assets/toppings.json"
@@ -79,7 +89,7 @@ func choose_prompt():
 			endendless()
 			return
 		pr = prompts.pop_front()
-		while pr["dificulty"] >= 1:
+		while pr["dificulty"] == 1:
 			if prompts == []:
 				endendless()
 				return
@@ -132,7 +142,11 @@ func sstart():
 func end():
 	$Control/End2.show()
 
+func endles():
+	$Control/End25.show()
+	
 func endless():
+	$Control/End25.hide()
 	$Control/End2.hide()
 	$Control/End.hide()
 	is_endless = true
@@ -141,3 +155,4 @@ func endless():
 func endendless():
 	$Control/End3.show()
 	$Control/GPUParticles2D.emitting = true
+	endend = true
