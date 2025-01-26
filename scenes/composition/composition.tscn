@@ -1,19 +1,20 @@
-[gd_scene load_steps=24 format=3 uid="uid://6kw3g6bmikqu"]
+[gd_scene load_steps=25 format=3 uid="uid://6kw3g6bmikqu"]
 
 [ext_resource type="Script" path="res://scenes/composition/composition.gd" id="1_8q7nh"]
 [ext_resource type="Texture2D" uid="uid://wuogjxb7m8cq" path="res://assets/syrup_pump.png" id="2_m5yj8"]
 [ext_resource type="Texture2D" uid="uid://dvap80laic0to" path="res://assets/decor_2_pumpless.png" id="3_aoqim"]
 [ext_resource type="Texture2D" uid="uid://c8g462a5ygog8" path="res://assets/verre_vide.png" id="3_iuv2l"]
+[ext_resource type="Texture2D" uid="uid://bolqyromgna0w" path="res://assets/the.png" id="4_12rl6"]
 [ext_resource type="Texture2D" uid="uid://b4qrclnyb6oep" path="res://assets/syrup_pump_cover.png" id="4_c2l0h"]
-[ext_resource type="Texture2D" uid="uid://durr5bk2d1bp7" path="res://assets/toppings/black.png" id="6_p1s0q"]
+[ext_resource type="Texture2D" uid="uid://c856wc8xt7bix" path="res://assets/bubbles.png" id="5_qk1ry"]
+[ext_resource type="Texture2D" uid="uid://ctgcmvx2qe8rx" path="res://assets/sirop.png" id="6_xjcdl"]
 [ext_resource type="Texture2D" uid="uid://chmlhfkqq4xxm" path="res://assets/bouton_craft_1.png" id="7_jbqnm"]
-[ext_resource type="Texture2D" uid="uid://breev44ls5lai" path="res://assets/toppings/citron.png" id="7_s0d7g"]
 [ext_resource type="AudioStream" uid="uid://dpskva8lyvi7d" path="res://assets/sounds/tea.wav" id="8_kc1n8"]
-[ext_resource type="Texture2D" uid="uid://bbitqqpk5xujs" path="res://assets/toppings/ananas.png" id="8_pyats"]
 [ext_resource type="AudioStream" uid="uid://d2dcf5iivfv32" path="res://assets/sounds/syrup2.wav" id="9_3316o"]
 [ext_resource type="AudioStream" uid="uid://bvsbbqnilyish" path="res://assets/sounds/tapioca.wav" id="10_ik467"]
 [ext_resource type="PackedScene" uid="uid://6vhvfllng0a" path="res://scenes/rainning_tapioca.tscn" id="11_7nw1a"]
 [ext_resource type="Texture2D" uid="uid://ci481pvs176ul" path="res://assets/theiere.png" id="12_dvh0g"]
+[ext_resource type="Texture2D" uid="uid://berslddf3i2bb" path="res://assets/bubble.png" id="14_6bjjf"]
 [ext_resource type="Texture2D" uid="uid://pajx283ag8qp" path="res://assets/bulle_texte_cropped.png" id="14_psxxp"]
 [ext_resource type="Texture2D" uid="uid://egfp342sfpk8" path="res://assets/bouton_craft_2.png" id="15_nnlah"]
 [ext_resource type="Texture2D" uid="uid://dpw1n3gqjcmt7" path="res://assets/bouton_craft_2_pressed.png" id="16_s61ik"]
@@ -406,28 +407,21 @@ visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("6_p1s0q")
+texture = ExtResource("4_12rl6")
 
 [node name="sirop" type="TextureRect" parent="."]
 visible = false
 layout_mode = 0
 offset_right = 960.0
 offset_bottom = 885.0
-texture = ExtResource("7_s0d7g")
+texture = ExtResource("6_xjcdl")
 
 [node name="bubbles" type="TextureRect" parent="."]
 visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("8_pyats")
-
-[node name="verre_vide_front" type="TextureRect" parent="."]
-layout_mode = 1
-offset_right = 1000.0
-offset_bottom = 910.0
-texture = ExtResource("3_iuv2l")
-metadata/_edit_use_anchors_ = true
+texture = ExtResource("5_qk1ry")
 
 [node name="SectionRect" type="TextureRect" parent="."]
 layout_mode = 0
@@ -469,16 +463,20 @@ libraries = {
 
 [node name="tea_sound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_kc1n8")
-volume_db = -1.0
 
 [node name="syrup_sound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_3316o")
-volume_db = 7.0
 
 [node name="bubble_sound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("10_ik467")
 
 [node name="RainningTapioca" parent="." instance=ExtResource("11_7nw1a")]
+position = Vector2(680, -397)
+
+[node name="GPUParticles2D" parent="RainningTapioca" index="0"]
+position = Vector2(2, 854)
+amount = 10
+texture = ExtResource("14_6bjjf")
 
 [node name="theiere" type="TextureRect" parent="."]
 modulate = Color(1, 1, 1, 0)
@@ -492,10 +490,10 @@ texture = ExtResource("12_dvh0g")
 [node name="DescrBubble" type="TextureRect" parent="."]
 visible = false
 layout_mode = 0
-offset_left = 447.0
-offset_top = 15.0
-offset_right = 780.0
-offset_bottom = 261.0
+offset_left = 510.0
+offset_top = 49.0
+offset_right = 869.0
+offset_bottom = 302.0
 texture = ExtResource("14_psxxp")
 
 [node name="LabelMargin" type="MarginContainer" parent="DescrBubble"]

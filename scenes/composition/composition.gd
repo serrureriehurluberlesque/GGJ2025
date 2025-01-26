@@ -52,6 +52,7 @@ func init_toppings(ingredients_list: Array) -> void:
 	$tea.visible = false
 	$sirop.visible = false
 	$bubbles.visible = false
+	$SectionRect.texture = load("res://assets/bouton_craft_1_tea.png")
 	
 	# Set toppings
 	all_toppings = ingredients_list
@@ -63,11 +64,12 @@ func populate_list() -> void:
 		%List.remove_child(n)
 		n.queue_free()
 		
-	for tea in all_toppings[step_id]:
+	for elem in all_toppings[step_id]:
 		var item = preload(scene_item).instantiate()
-		item.item_title = tea["title"]
-		item.item_descr = tea["descr"]
-		item.key = tea["key"]
+		item.item_title = elem["title"]
+		item.item_descr = elem["descr"]
+		item.key = elem["key"]
+		item.item_icon = load("res://assets/icon/" + elem["key"] + ".png")
 		item.connect("chosen", show_description)
 		%List.add_child(item)
 		
@@ -118,12 +120,12 @@ func prepare_next() -> void:
 
 func set_section_title() -> void:
 	if step_id == 0:
-		title.text = "Choisissez le thé"
+		title.text = "Thé"
 	elif step_id == 1:
-		title.text = "Choisissez le sirop"
+		title.text = "Sirop"
 		$SectionRect.texture = load("res://assets/bouton_craft_1_sirup.png")
 	else:
-		title.text = "Choisissez les perles"
+		title.text = "Boba"
 		$SectionRect.texture = load("res://assets/bouton_craft_1_bubble.png")
 
 
