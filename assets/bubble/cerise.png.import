@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://efkjl1n31oba"
-path="res://.godot/imported/cereise.png-ec20767806856f04d2a9f3a68109e82a.ctex"
+uid="uid://dw4w8yssq6b1g"
+path="res://.godot/imported/cerise.png-c7b6483b2c5bbf723fb5f08572b29565.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/bubble/cereise.png"
-dest_files=["res://.godot/imported/cereise.png-ec20767806856f04d2a9f3a68109e82a.ctex"]
+source_file="res://assets/bubble/cerise.png"
+dest_files=["res://.godot/imported/cerise.png-c7b6483b2c5bbf723fb5f08572b29565.ctex"]
 
 [params]
 
