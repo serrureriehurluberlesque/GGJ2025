@@ -233,10 +233,10 @@ metadata/_edit_use_anchors_ = true
 [node name="TextMargin" type="MarginContainer" parent="Prompt"]
 layout_mode = 1
 anchors_preset = -1
-offset_left = 520.0
-offset_top = 157.0
-offset_right = 850.0
-offset_bottom = 382.0
+offset_left = 521.0
+offset_top = 153.0
+offset_right = 851.0
+offset_bottom = 378.0
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 15
 theme_override_constants/margin_right = 15

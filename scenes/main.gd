@@ -123,6 +123,8 @@ func init_verificator(response):
 
 func redo():
 	finished.emit(false)
+	redo_or_next_btn.pressed.disconnect(redo)
 
 func next():
 	finished.emit(true)
+	redo_or_next_btn.pressed.disconnect(next)
