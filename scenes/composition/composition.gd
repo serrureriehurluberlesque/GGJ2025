@@ -5,28 +5,6 @@ signal validate
 #static var STEPS: Array = ["tea", "syrup", "bubble"]
 var step_id: int = 0
 
-static var POSSIBLE_TEAS: Array = [
-	{"key": "green", "title": "Green Tea", "descr": "Blabla green"},
-	{"key": "black", "title": "Black Tea", "descr": "Blabla black"},
-	{"key": "mate", "title": "Maté", "descr": "Fruit du framboisier. Facilite le transit intestinal."},
-]
-static var POSSIBLE_SYRUPS: Array = [
-	{"key": "hibiscus", "title": "Hibiscus", "descr": "Blabla"},
-	{"key": "black", "title": "Black Tea", "descr": "Blabla black"},
-	{"key": "mate", "title": "Maté", "descr": "Blabla maté"},
-	{"key": "hibiscus", "title": "Hibiscus", "descr": "Blabla"},
-	{"key": "black", "title": "Black Tea", "descr": "Blabla black"},
-	{"key": "mate", "title": "Maté", "descr": "Blabla maté"},
-]
-static var POSSIBLE_BUBBLES: Array = [
-	{"key": "tapioca", "title": "Hibiscus", "descr": "Blabla"},
-	{"key": "pasteque", "title": "Black Tea", "descr": "Blabla black"},
-	{"key": "cerise", "title": "Maté", "descr": "Blabla maté"},
-	{"key": "fraise", "title": "Hibiscus", "descr": "Blabla"},
-	{"key": "litchi", "title": "Litchi", "descr": "Blabla black"},
-	{"key": "ananas", "title": "Ananas", "descr": "Blabla maté"},
-]
-
 @onready var title: Label = %SectionTitle
 
 var all_toppings = []
@@ -40,7 +18,6 @@ const scene_item = "res://scenes/composition/icon_item_container.tscn"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	init_toppings([POSSIBLE_TEAS, POSSIBLE_SYRUPS, POSSIBLE_BUBBLES])
 	set_section_title()
 	
 func init_toppings(ingredients_list: Array) -> void:
@@ -82,12 +59,13 @@ func show_description(description: String, key: String) -> void:
 	selected_key = key
 	# Make choices look disabled
 	for n in %List.get_children():
+		n.prev_modulate = n.get_node("%Icon").modulate
 		if n.key != key:
 			n.texture_normal = n.texture_disabled
 			n.get_node("%Icon").modulate = Color("7a797f")
 		else:
 			n.texture_normal = load("res://assets/bouton_craft_2.png")
-			n.get_node("%Icon").modulate = Color("ffffff")
+			n.get_node("%Icon").modulate = Color("fff1ee")
 			
 	$DescrBubble/Submit.visible = true
 	
@@ -110,11 +88,9 @@ func make_choice(key: String) -> void:
 	
 	# Disable choices
 	for n in %List.get_children():
-		if n.key != key:
-			n.disabled = true
-			n.get_node("%Icon").modulate = Color("7a797f")
-		else:
-			n.texture_normal = n.texture_hover
+		n.disabled = true
+		if n.key == key:
+			n.texture_disabled = n.texture_normal
 
 func prepare_next() -> void:	
 	if chosen_tea and chosen_syrup and chosen_bubble:
@@ -127,6 +103,7 @@ func prepare_next() -> void:
 func set_section_title() -> void:
 	if step_id == 0:
 		title.text = "Thé"
+		$SectionRect.texture = load("res://assets/bouton_craft_1_tea.png")
 	elif step_id == 1:
 		title.text = "Sirop"
 		$SectionRect.texture = load("res://assets/bouton_craft_1_sirup.png")

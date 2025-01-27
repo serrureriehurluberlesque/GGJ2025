@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://6kw3g6bmikqu"]
+[gd_scene load_steps=26 format=3 uid="uid://6kw3g6bmikqu"]
 
 [ext_resource type="Script" path="res://scenes/composition/composition.gd" id="1_8q7nh"]
 [ext_resource type="Texture2D" uid="uid://wuogjxb7m8cq" path="res://assets/syrup_pump.png" id="2_m5yj8"]
@@ -10,7 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://ctgcmvx2qe8rx" path="res://assets/sirop.png" id="6_xjcdl"]
 [ext_resource type="AudioStream" uid="uid://dpskva8lyvi7d" path="res://assets/sounds/tea.wav" id="8_kc1n8"]
 [ext_resource type="AudioStream" uid="uid://d2dcf5iivfv32" path="res://assets/sounds/syrup2.wav" id="9_3316o"]
-[ext_resource type="Texture2D" uid="uid://0kmqyksb61d6" path="res://assets/bouton_craft_1_tea.png" id="9_scmgn"]
 [ext_resource type="FontFile" uid="uid://c4i4numogvrbl" path="res://assets/CUTE FROG.ttf" id="10_72v0u"]
 [ext_resource type="AudioStream" uid="uid://bvsbbqnilyish" path="res://assets/sounds/tapioca.wav" id="10_ik467"]
 [ext_resource type="PackedScene" uid="uid://6vhvfllng0a" path="res://scenes/rainning_tapioca.tscn" id="11_7nw1a"]
@@ -431,7 +430,6 @@ offset_left = 91.0
 offset_top = 47.0
 offset_right = 357.0
 offset_bottom = 195.0
-texture = ExtResource("9_scmgn")
 stretch_mode = 4
 
 [node name="MarginTitle" type="MarginContainer" parent="SectionRect"]

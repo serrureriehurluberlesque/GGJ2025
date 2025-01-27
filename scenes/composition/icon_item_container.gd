@@ -4,7 +4,6 @@ signal chosen
 
 @onready var icon: TextureRect = %Icon
 @onready var title: Label = %Title
-#@onready var description: Label = %Description
 @export var key: String
 
 @export var item_icon: Texture:
@@ -18,13 +17,8 @@ signal chosen
 		_update_labels()
 		
 @export var item_descr: String = ""
-#@export var item_descr: String = "Description":
-	#set(value):
-		#item_descr = value
-		#_update_labels()
 		
 var prev_modulate: Color
-
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -35,9 +29,6 @@ func _update_labels():
 		icon.texture = item_icon
 	if title:
 		title.text = item_title
-	#if description:
-		#description.text = item_descr
-		#self.tooltip_text = item_descr
 
 func _on_pressed() -> void:
 	$ChoiceSound.play()
@@ -46,9 +37,11 @@ func _on_pressed() -> void:
 
 func _on_mouse_entered() -> void:
 	prev_modulate = %Icon.modulate
-	%Icon.modulate = Color("fff1ee")
-	$AnimationPlayer.play("icon_wiggle")
+	if not self.disabled:
+		%Icon.modulate = Color("fff1ee")
+		$AnimationPlayer.play("icon_wiggle")
 
 
 func _on_mouse_exited() -> void:
-	%Icon.modulate = prev_modulate
+	if not self.disabled:
+		%Icon.modulate = prev_modulate
